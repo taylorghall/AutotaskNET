@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public SalesOrder() : base() { } //end SalesOrder()
-        public SalesOrder(net.autotask.webservices.SalesOrder entity) : base(entity)
+        public SalesOrder(ATWS.SalesOrder entity) : base(entity)
         {
 
-        } //end SalesOrder(net.autotask.webservices.SalesOrder entity)
+        } //end SalesOrder(ATWS.SalesOrder entity)
 
-        public static implicit operator net.autotask.webservices.SalesOrder(SalesOrder salesorder)
+        public static implicit operator ATWS.SalesOrder(SalesOrder salesorder)
         {
-            return new net.autotask.webservices.SalesOrder()
+            return new ATWS.SalesOrder()
             {
                 id = salesorder.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.SalesOrder(SalesOrder salesorder)
+        } //end implicit operator ATWS.SalesOrder(SalesOrder salesorder)
 
         #endregion //Constructors
 

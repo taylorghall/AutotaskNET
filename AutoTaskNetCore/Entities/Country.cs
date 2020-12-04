@@ -22,7 +22,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Country() : base() { } //end Country()
-        public Country(net.autotask.webservices.Country entity) : base(entity)
+        public Country(ATWS.Country entity) : base(entity)
         {
             this.AddressFormatID = long.Parse(entity.AddressFormatID.ToString());
             this.DisplayName = entity.DisplayName == null ? default(string) : entity.DisplayName.ToString();
@@ -33,11 +33,11 @@ namespace AutotaskNET.Entities
             this.Name = entity.Name == null ? default(string) : entity.Name.ToString();
             this.QuoteTemplateID = entity.QuoteTemplateID == null ? default(int?) : int.Parse(entity.QuoteTemplateID.ToString());
 
-        } //end Country(net.autotask.webservices.Country entity)
+        } //end Country(ATWS.Country entity)
 
-        public static implicit operator net.autotask.webservices.Country(Country country)
+        public static implicit operator ATWS.Country(Country country)
         {
-            return new net.autotask.webservices.Country()
+            return new ATWS.Country()
             {
                 id = country.id,
                 Active = country.Active,
@@ -50,7 +50,7 @@ namespace AutotaskNET.Entities
                 QuoteTemplateID = country.QuoteTemplateID
             };
 
-        } //end implicit operator net.autotask.webservices.Country(Country country)
+        } //end implicit operator ATWS.Country(Country country)
 
         #endregion //Constructors
 

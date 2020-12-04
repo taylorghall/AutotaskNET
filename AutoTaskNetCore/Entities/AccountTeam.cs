@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountTeam() : base() { } //end AccountTeam()
-        public AccountTeam(net.autotask.webservices.AccountTeam entity) : base(entity)
+        public AccountTeam(ATWS.AccountTeam entity) : base(entity)
         {
 
-        } //end AccountTeam(net.autotask.webservices.AccountTeam entity)
+        } //end AccountTeam(ATWS.AccountTeam entity)
 
-        public static implicit operator net.autotask.webservices.AccountTeam(AccountTeam accountteam)
+        public static implicit operator ATWS.AccountTeam(AccountTeam accountteam)
         {
-            return new net.autotask.webservices.AccountTeam()
+            return new ATWS.AccountTeam()
             {
                 id = accountteam.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AccountTeam(AccountTeam accountteam)
+        } //end implicit operator ATWS.AccountTeam(AccountTeam accountteam)
 
         #endregion //Constructors
 

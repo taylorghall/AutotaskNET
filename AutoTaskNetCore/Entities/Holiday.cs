@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Holiday() : base() { } //end Holiday()
-        public Holiday(net.autotask.webservices.Holiday entity) : base(entity)
+        public Holiday(ATWS.Holiday entity) : base(entity)
         {
 
-        } //end Holiday(net.autotask.webservices.Holiday entity)
+        } //end Holiday(ATWS.Holiday entity)
 
-        public static implicit operator net.autotask.webservices.Holiday(Holiday holiday)
+        public static implicit operator ATWS.Holiday(Holiday holiday)
         {
-            return new net.autotask.webservices.Holiday()
+            return new ATWS.Holiday()
             {
                 id = holiday.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Holiday(Holiday holiday)
+        } //end implicit operator ATWS.Holiday(Holiday holiday)
 
         #endregion //Constructors
 

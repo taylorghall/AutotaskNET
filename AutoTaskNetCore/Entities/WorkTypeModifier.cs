@@ -26,20 +26,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public WorkTypeModifier() : base() { } //end WorkTypeModifier()
-        public WorkTypeModifier(net.autotask.webservices.WorkTypeModifier entity) : base(entity)
+        public WorkTypeModifier(ATWS.WorkTypeModifier entity) : base(entity)
         {
 
-        } //end WorkTypeModifier(net.autotask.webservices.WorkTypeModifier entity)
+        } //end WorkTypeModifier(ATWS.WorkTypeModifier entity)
 
-        public static implicit operator net.autotask.webservices.WorkTypeModifier(WorkTypeModifier worktypemodifier)
+        public static implicit operator ATWS.WorkTypeModifier(WorkTypeModifier worktypemodifier)
         {
-            return new net.autotask.webservices.WorkTypeModifier()
+            return new ATWS.WorkTypeModifier()
             {
                 id = worktypemodifier.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.WorkTypeModifier(WorkTypeModifier worktypemodifier)
+        } //end implicit operator ATWS.WorkTypeModifier(WorkTypeModifier worktypemodifier)
 
         #endregion //Constructors
 

@@ -23,11 +23,11 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Quote() : base() { } //end Quote()
-        public Quote(net.autotask.webservices.Quote entity) : base(entity)
+        public Quote(ATWS.Quote entity) : base(entity)
         {
             var thisType = typeof(Quote);
             var fields = typeof(Quote).GetFields();
-            var entityReflection = typeof(net.autotask.webservices.Quote);
+            var entityReflection = typeof(ATWS.Quote);
 
             foreach (var i in fields)
             {
@@ -49,12 +49,12 @@ namespace AutotaskNET.Entities
                     throw;
                 }
             }
-        } //end Quote(net.autotask.webservices.Quote entity)
+        } //end Quote(ATWS.Quote entity)
 
-        public static implicit operator net.autotask.webservices.Quote(Quote quote)
+        public static implicit operator ATWS.Quote(Quote quote)
         {
-            var newQuote = new net.autotask.webservices.Quote();
-            var entityReflection = typeof(net.autotask.webservices.Quote);
+            var newQuote = new ATWS.Quote();
+            var entityReflection = typeof(ATWS.Quote);
             var thisType = quote.GetType();
             var fields = quote.GetType().GetFields();
 
@@ -85,7 +85,7 @@ namespace AutotaskNET.Entities
 
             return newQuote;
 
-        } //end implicit operator net.autotask.webservices.Quote(Quote quote)
+        } //end implicit operator ATWS.Quote(Quote quote)
 
         #endregion //Constructors
 

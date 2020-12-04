@@ -28,7 +28,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Opportunity() : base() { } //end Opportunity()
-        public Opportunity(net.autotask.webservices.Opportunity entity) : base(entity)
+        public Opportunity(ATWS.Opportunity entity) : base(entity)
         {
             this.id = entity.id;
             this.Title = entity.Title?.ToString();
@@ -89,11 +89,11 @@ namespace AutotaskNET.Entities
             this.UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
 
-        } //end Opportunity(net.autotask.webservices.Opportunity entity)
+        } //end Opportunity(ATWS.Opportunity entity)
 
-        public static implicit operator net.autotask.webservices.Opportunity(Opportunity opportunity)
+        public static implicit operator ATWS.Opportunity(Opportunity opportunity)
         {
-            return new net.autotask.webservices.Opportunity()
+            return new ATWS.Opportunity()
             {
                 id = opportunity.id,
                 Title = opportunity.Title,
@@ -150,10 +150,10 @@ namespace AutotaskNET.Entities
                 WinReasonDetail = opportunity.WinReasonDetail,
                 YearlyCost = opportunity.YearlyCost,
                 YearlyRevenue = opportunity.YearlyRevenue,
-                UserDefinedFields = Array.ConvertAll(opportunity.UserDefinedFields.ToArray(), new Converter<UserDefinedField, net.autotask.webservices.UserDefinedField>(UserDefinedField.ToATWS))
+                UserDefinedFields = Array.ConvertAll(opportunity.UserDefinedFields.ToArray(), new Converter<UserDefinedField, ATWS.UserDefinedField>(UserDefinedField.ToATWS))
             };
 
-        } //end implicit operator net.autotask.webservices.Opportunity(Opportunity opportunity)
+        } //end implicit operator ATWS.Opportunity(Opportunity opportunity)
 
         #endregion //Constructors
 

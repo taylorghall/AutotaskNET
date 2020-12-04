@@ -22,20 +22,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ClientPortalUser() : base() { } //end ClientPortalUser()
-        public ClientPortalUser(net.autotask.webservices.ClientPortalUser entity) : base(entity)
+        public ClientPortalUser(ATWS.ClientPortalUser entity) : base(entity)
         {
 
-        } //end ClientPortalUser(net.autotask.webservices.ClientPortalUser entity)
+        } //end ClientPortalUser(ATWS.ClientPortalUser entity)
 
-        public static implicit operator net.autotask.webservices.ClientPortalUser(ClientPortalUser clientportaluser)
+        public static implicit operator ATWS.ClientPortalUser(ClientPortalUser clientportaluser)
         {
-            return new net.autotask.webservices.ClientPortalUser()
+            return new ATWS.ClientPortalUser()
             {
                 id = clientportaluser.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ClientPortalUser(ClientPortalUser clientportaluser)
+        } //end implicit operator ATWS.ClientPortalUser(ClientPortalUser clientportaluser)
 
         #endregion //Constructors
 

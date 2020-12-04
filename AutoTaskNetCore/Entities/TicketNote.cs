@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketNote() : base() { } //end TicketNote()
-        public TicketNote(net.autotask.webservices.TicketNote entity) : base(entity)
+        public TicketNote(ATWS.TicketNote entity) : base(entity)
         {
             this.CreatorResourceID = entity.CreatorResourceID == null ? default(int?) : int.Parse(entity.CreatorResourceID.ToString());
             this.Description = entity.Description == null ? default(string) : entity.Description.ToString();
@@ -33,11 +33,11 @@ namespace AutotaskNET.Entities
             this.TicketID = int.Parse(entity.TicketID.ToString());
             this.Title = entity.Title == null ? default(string) : entity.Title.ToString();
 
-        } //end TicketNote(net.autotask.webservices.TicketNote entity)
+        } //end TicketNote(ATWS.TicketNote entity)
 
-        public static implicit operator net.autotask.webservices.TicketNote(TicketNote ticketnote)
+        public static implicit operator ATWS.TicketNote(TicketNote ticketnote)
         {
-            return new net.autotask.webservices.TicketNote()
+            return new ATWS.TicketNote()
             {
                 id = ticketnote.id,
                 CreatorResourceID = ticketnote.CreatorResourceID,
@@ -49,7 +49,7 @@ namespace AutotaskNET.Entities
                 Title = ticketnote.Title
             };
 
-        } //end implicit operator net.autotask.webservices.TicketNote(TicketNote ticketnote)
+        } //end implicit operator ATWS.TicketNote(TicketNote ticketnote)
 
         #endregion //Constructors
 

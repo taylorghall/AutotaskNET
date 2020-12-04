@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractTicketPurchase() : base() { } //end ContractTicketPurchase()
-        public ContractTicketPurchase(net.autotask.webservices.ContractTicketPurchase entity) : base(entity)
+        public ContractTicketPurchase(ATWS.ContractTicketPurchase entity) : base(entity)
         {
 
-        } //end ContractTicketPurchase(net.autotask.webservices.ContractTicketPurchase entity)
+        } //end ContractTicketPurchase(ATWS.ContractTicketPurchase entity)
 
-        public static implicit operator net.autotask.webservices.ContractTicketPurchase(ContractTicketPurchase contractticketpurchase)
+        public static implicit operator ATWS.ContractTicketPurchase(ContractTicketPurchase contractticketpurchase)
         {
-            return new net.autotask.webservices.ContractTicketPurchase()
+            return new ATWS.ContractTicketPurchase()
             {
                 id = contractticketpurchase.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractTicketPurchase(ContractTicketPurchase contractticketpurchase)
+        } //end implicit operator ATWS.ContractTicketPurchase(ContractTicketPurchase contractticketpurchase)
 
         #endregion //Constructors
 

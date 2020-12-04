@@ -25,7 +25,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractServiceAdjustment() : base() { } //end ContractServiceAdjustment()
-        public ContractServiceAdjustment(net.autotask.webservices.ContractServiceAdjustment entity) : base(entity)
+        public ContractServiceAdjustment(ATWS.ContractServiceAdjustment entity) : base(entity)
         {
             this.EffectiveDate = DateTime.Parse(entity.EffectiveDate.ToString());
             this.UnitChange = entity.UnitChange == null ? default(int?) : int.Parse(entity.UnitChange.ToString());
@@ -36,11 +36,11 @@ namespace AutotaskNET.Entities
             this.ContractServiceID = entity.ContractServiceID == null ? default(int?) : int.Parse(entity.ContractServiceID.ToString());
             this.QuoteItemID = entity.QuoteItemID == null ? default(int?) : int.Parse(entity.QuoteItemID.ToString());
             this.ServiceID = entity.ServiceID == null ? default(int?) : int.Parse(entity.ServiceID.ToString());
-        } //end ContractServiceAdjustment(net.autotask.webservices.ContractServiceAdjustment entity)
+        } //end ContractServiceAdjustment(ATWS.ContractServiceAdjustment entity)
 
-        public static implicit operator net.autotask.webservices.ContractServiceAdjustment(ContractServiceAdjustment contractserviceadjustment)
+        public static implicit operator ATWS.ContractServiceAdjustment(ContractServiceAdjustment contractserviceadjustment)
         {
-            return new net.autotask.webservices.ContractServiceAdjustment()
+            return new ATWS.ContractServiceAdjustment()
             {
                 id = contractserviceadjustment.id,
                 ServiceID = contractserviceadjustment.ServiceID,
@@ -54,7 +54,7 @@ namespace AutotaskNET.Entities
                 QuoteItemID = contractserviceadjustment.QuoteItemID,
             };
 
-        } //end implicit operator net.autotask.webservices.ContractServiceAdjustment(ContractServiceAdjustment contractserviceadjustment)
+        } //end implicit operator ATWS.ContractServiceAdjustment(ContractServiceAdjustment contractserviceadjustment)
 
         #endregion //Constructors
 

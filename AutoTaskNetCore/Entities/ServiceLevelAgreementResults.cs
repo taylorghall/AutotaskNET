@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ServiceLevelAgreementResults() : base() { } //end ServiceLevelAgreementResults()
-        public ServiceLevelAgreementResults(net.autotask.webservices.ServiceLevelAgreementResults entity) : base(entity)
+        public ServiceLevelAgreementResults(ATWS.ServiceLevelAgreementResults entity) : base(entity)
         {
 
-        } //end ServiceLevelAgreementResults(net.autotask.webservices.ServiceLevelAgreementResults entity)
+        } //end ServiceLevelAgreementResults(ATWS.ServiceLevelAgreementResults entity)
 
-        public static implicit operator net.autotask.webservices.ServiceLevelAgreementResults(ServiceLevelAgreementResults servicelevelagreementresults)
+        public static implicit operator ATWS.ServiceLevelAgreementResults(ServiceLevelAgreementResults servicelevelagreementresults)
         {
-            return new net.autotask.webservices.ServiceLevelAgreementResults()
+            return new ATWS.ServiceLevelAgreementResults()
             {
                 id = servicelevelagreementresults.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ServiceLevelAgreementResults(ServiceLevelAgreementResults servicelevelagreementresults)
+        } //end implicit operator ATWS.ServiceLevelAgreementResults(ServiceLevelAgreementResults servicelevelagreementresults)
 
         #endregion //Constructors
 

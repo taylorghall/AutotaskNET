@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ExpenseItem() : base() { } //end ExpenseItem()
-        public ExpenseItem(net.autotask.webservices.ExpenseItem entity) : base(entity)
+        public ExpenseItem(ATWS.ExpenseItem entity) : base(entity)
         {
 
-        } //end ExpenseItem(net.autotask.webservices.ExpenseItem entity)
+        } //end ExpenseItem(ATWS.ExpenseItem entity)
 
-        public static implicit operator net.autotask.webservices.ExpenseItem(ExpenseItem expenseitem)
+        public static implicit operator ATWS.ExpenseItem(ExpenseItem expenseitem)
         {
-            return new net.autotask.webservices.ExpenseItem()
+            return new ATWS.ExpenseItem()
             {
                 id = expenseitem.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ExpenseItem(ExpenseItem expenseitem)
+        } //end implicit operator ATWS.ExpenseItem(ExpenseItem expenseitem)
 
         #endregion //Constructors
 

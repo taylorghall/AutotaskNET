@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Phase() : base() { } //end Phase()
-        public Phase(net.autotask.webservices.Phase entity) : base(entity)
+        public Phase(ATWS.Phase entity) : base(entity)
         {
 
-        } //end Phase(net.autotask.webservices.Phase entity)
+        } //end Phase(ATWS.Phase entity)
 
-        public static implicit operator net.autotask.webservices.Phase(Phase phase)
+        public static implicit operator ATWS.Phase(Phase phase)
         {
-            return new net.autotask.webservices.Phase()
+            return new ATWS.Phase()
             {
                 id = phase.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Phase(Phase phase)
+        } //end implicit operator ATWS.Phase(Phase phase)
 
         #endregion //Constructors
 

@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ResourceServiceDeskRole() : base() { } //end ResourceServiceDeskRole()
-        public ResourceServiceDeskRole(net.autotask.webservices.ResourceServiceDeskRole entity) : base(entity)
+        public ResourceServiceDeskRole(ATWS.ResourceServiceDeskRole entity) : base(entity)
         {
 
-        } //end ResourceServiceDeskRole(net.autotask.webservices.ResourceServiceDeskRole entity)
+        } //end ResourceServiceDeskRole(ATWS.ResourceServiceDeskRole entity)
 
-        public static implicit operator net.autotask.webservices.ResourceServiceDeskRole(ResourceServiceDeskRole resourceservicedeskrole)
+        public static implicit operator ATWS.ResourceServiceDeskRole(ResourceServiceDeskRole resourceservicedeskrole)
         {
-            return new net.autotask.webservices.ResourceServiceDeskRole()
+            return new ATWS.ResourceServiceDeskRole()
             {
                 id = resourceservicedeskrole.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ResourceServiceDeskRole(ResourceServiceDeskRole resourceservicedeskrole)
+        } //end implicit operator ATWS.ResourceServiceDeskRole(ResourceServiceDeskRole resourceservicedeskrole)
 
         #endregion //Constructors
 

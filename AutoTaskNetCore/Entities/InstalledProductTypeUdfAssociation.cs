@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InstalledProductTypeUdfAssociation() : base() { } //end InstalledProductTypeUdfAssociation()
-        public InstalledProductTypeUdfAssociation(net.autotask.webservices.InstalledProductTypeUdfAssociation entity) : base(entity)
+        public InstalledProductTypeUdfAssociation(ATWS.InstalledProductTypeUdfAssociation entity) : base(entity)
         {
 
-        } //end InstalledProductTypeUdfAssociation(net.autotask.webservices.InstalledProductTypeUdfAssociation entity)
+        } //end InstalledProductTypeUdfAssociation(ATWS.InstalledProductTypeUdfAssociation entity)
 
-        public static implicit operator net.autotask.webservices.InstalledProductTypeUdfAssociation(InstalledProductTypeUdfAssociation installedproducttypeudfassociation)
+        public static implicit operator ATWS.InstalledProductTypeUdfAssociation(InstalledProductTypeUdfAssociation installedproducttypeudfassociation)
         {
-            return new net.autotask.webservices.InstalledProductTypeUdfAssociation()
+            return new ATWS.InstalledProductTypeUdfAssociation()
             {
                 id = installedproducttypeudfassociation.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InstalledProductTypeUdfAssociation(InstalledProductTypeUdfAssociation installedproducttypeudfassociation)
+        } //end implicit operator ATWS.InstalledProductTypeUdfAssociation(InstalledProductTypeUdfAssociation installedproducttypeudfassociation)
 
         #endregion //Constructors
 

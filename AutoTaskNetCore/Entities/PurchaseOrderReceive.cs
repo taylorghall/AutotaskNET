@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public PurchaseOrderReceive() : base() { } //end PurchaseOrderReceive()
-        public PurchaseOrderReceive(net.autotask.webservices.PurchaseOrderReceive entity) : base(entity)
+        public PurchaseOrderReceive(ATWS.PurchaseOrderReceive entity) : base(entity)
         {
 
-        } //end PurchaseOrderReceive(net.autotask.webservices.PurchaseOrderReceive entity)
+        } //end PurchaseOrderReceive(ATWS.PurchaseOrderReceive entity)
 
-        public static implicit operator net.autotask.webservices.PurchaseOrderReceive(PurchaseOrderReceive purchaseorderreceive)
+        public static implicit operator ATWS.PurchaseOrderReceive(PurchaseOrderReceive purchaseorderreceive)
         {
-            return new net.autotask.webservices.PurchaseOrderReceive()
+            return new ATWS.PurchaseOrderReceive()
             {
                 id = purchaseorderreceive.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.PurchaseOrderReceive(PurchaseOrderReceive purchaseorderreceive)
+        } //end implicit operator ATWS.PurchaseOrderReceive(PurchaseOrderReceive purchaseorderreceive)
 
         #endregion //Constructors
 

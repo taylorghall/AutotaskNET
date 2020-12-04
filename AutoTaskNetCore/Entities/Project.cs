@@ -24,7 +24,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Project() : base() { } //end Project()
-        public Project(net.autotask.webservices.Project entity) : base(entity)
+        public Project(ATWS.Project entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.EndDateTime = DateTime.Parse(entity.EndDateTime.ToString());
@@ -65,17 +65,17 @@ namespace AutotaskNET.Entities
             this.StatusDateTime = entity.StatusDateTime == null ? default(DateTime?) : DateTime.Parse(entity.StatusDateTime.ToString());
             this.StatusDetail = entity.StatusDetail == null ? default(string) : entity.StatusDetail.ToString();
 
-        } //end Project(net.autotask.webservices.Project entity)
+        } //end Project(ATWS.Project entity)
 
-        public static implicit operator net.autotask.webservices.Project(Project project)
+        public static implicit operator ATWS.Project(Project project)
         {
-            return new net.autotask.webservices.Project()
+            return new ATWS.Project()
             {
                 id = project.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Project(Project project)
+        } //end implicit operator ATWS.Project(Project project)
 
         #endregion //Constructors
 

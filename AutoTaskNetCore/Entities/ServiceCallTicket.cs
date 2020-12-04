@@ -21,22 +21,22 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ServiceCallTicket() : base() { } //end ServiceCallTicket()
-        public ServiceCallTicket(net.autotask.webservices.ServiceCallTicket entity) : base(entity)
+        public ServiceCallTicket(ATWS.ServiceCallTicket entity) : base(entity)
         {
             this.ServiceCallID = int.Parse(entity.ServiceCallID.ToString());
             this.TicketID = int.Parse(entity.TicketID.ToString());
 
-        } //end ServiceCallTicket(net.autotask.webservices.ServiceCallTicket entity)
+        } //end ServiceCallTicket(ATWS.ServiceCallTicket entity)
 
-        public static implicit operator net.autotask.webservices.ServiceCallTicket(ServiceCallTicket servicecallticket)
+        public static implicit operator ATWS.ServiceCallTicket(ServiceCallTicket servicecallticket)
         {
-            return new net.autotask.webservices.ServiceCallTicket()
+            return new ATWS.ServiceCallTicket()
             {
                 id = servicecallticket.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ServiceCallTicket(ServiceCallTicket servicecallticket)
+        } //end implicit operator ATWS.ServiceCallTicket(ServiceCallTicket servicecallticket)
 
         #endregion //Constructors
 

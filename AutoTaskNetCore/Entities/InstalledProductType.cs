@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InstalledProductType() : base() { } //end InstalledProductType()
-        public InstalledProductType(net.autotask.webservices.InstalledProductType entity) : base(entity)
+        public InstalledProductType(ATWS.InstalledProductType entity) : base(entity)
         {
 
-        } //end InstalledProductType(net.autotask.webservices.InstalledProductType entity)
+        } //end InstalledProductType(ATWS.InstalledProductType entity)
 
-        public static implicit operator net.autotask.webservices.InstalledProductType(InstalledProductType installedproducttype)
+        public static implicit operator ATWS.InstalledProductType(InstalledProductType installedproducttype)
         {
-            return new net.autotask.webservices.InstalledProductType()
+            return new ATWS.InstalledProductType()
             {
                 id = installedproducttype.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InstalledProductType(InstalledProductType installedproducttype)
+        } //end implicit operator ATWS.InstalledProductType(InstalledProductType installedproducttype)
 
         #endregion //Constructors
 

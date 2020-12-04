@@ -28,20 +28,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ProjectCost() : base() { } //end ProjectCost()
-        public ProjectCost(net.autotask.webservices.ProjectCost entity) : base(entity)
+        public ProjectCost(ATWS.ProjectCost entity) : base(entity)
         {
 
-        } //end ProjectCost(net.autotask.webservices.ProjectCost entity)
+        } //end ProjectCost(ATWS.ProjectCost entity)
 
-        public static implicit operator net.autotask.webservices.ProjectCost(ProjectCost projectcost)
+        public static implicit operator ATWS.ProjectCost(ProjectCost projectcost)
         {
-            return new net.autotask.webservices.ProjectCost()
+            return new ATWS.ProjectCost()
             {
                 id = projectcost.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ProjectCost(ProjectCost projectcost)
+        } //end implicit operator ATWS.ProjectCost(ProjectCost projectcost)
 
         #endregion //Constructors
 

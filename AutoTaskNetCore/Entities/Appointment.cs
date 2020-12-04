@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Appointment() : base() { } //end Appointment()
-        public Appointment(net.autotask.webservices.Appointment entity) : base(entity)
+        public Appointment(ATWS.Appointment entity) : base(entity)
         {
 
-        } //end Appointment(net.autotask.webservices.Appointment entity)
+        } //end Appointment(ATWS.Appointment entity)
 
-        public static implicit operator net.autotask.webservices.Appointment(Appointment appointment)
+        public static implicit operator ATWS.Appointment(Appointment appointment)
         {
-            return new net.autotask.webservices.Appointment()
+            return new ATWS.Appointment()
             {
                 id = appointment.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Appointment(Appointment appointment)
+        } //end implicit operator ATWS.Appointment(Appointment appointment)
 
         #endregion //Constructors
 

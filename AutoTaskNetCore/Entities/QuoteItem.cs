@@ -22,7 +22,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public QuoteItem() : base() { } //end QuoteItem()
-        public QuoteItem(net.autotask.webservices.QuoteItem entity) : base(entity)
+        public QuoteItem(ATWS.QuoteItem entity) : base(entity)
         {
             var thisType = GetType();
             var fields = GetType().GetFields();
@@ -49,11 +49,11 @@ namespace AutotaskNET.Entities
                 }
             }
 
-        } //end QuoteItem(net.autotask.webservices.QuoteItem entity)
+        } //end QuoteItem(ATWS.QuoteItem entity)
 
-        public static implicit operator net.autotask.webservices.QuoteItem(QuoteItem entity)
+        public static implicit operator ATWS.QuoteItem(QuoteItem entity)
         {
-            var newEntity = new net.autotask.webservices.QuoteItem();
+            var newEntity = new ATWS.QuoteItem();
             var entityReflection = newEntity.GetType();
             var thisType = entity.GetType();
             var fields = entity.GetType().GetFields();
@@ -86,7 +86,7 @@ namespace AutotaskNET.Entities
 
             return newEntity;
 
-        } //end implicit operator net.autotask.webservices.QuoteItem(QuoteItem quoteitem)
+        } //end implicit operator ATWS.QuoteItem(QuoteItem quoteitem)
 
         #endregion //Constructors
 

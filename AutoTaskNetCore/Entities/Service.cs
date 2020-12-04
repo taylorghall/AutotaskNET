@@ -22,7 +22,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Service() : base() { } //end Service()
-        public Service(net.autotask.webservices.Service entity) : base(entity)
+        public Service(ATWS.Service entity) : base(entity)
         {
             this.Name = entity.Name?.ToString();
             this.Description = entity.Description?.ToString();
@@ -55,11 +55,11 @@ namespace AutotaskNET.Entities
             this.UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.Service(Service service)
+        public static implicit operator ATWS.Service(Service service)
         {
-            return new net.autotask.webservices.Service()
+            return new ATWS.Service()
             {
                 id = service.id,
                 IsActive = service.IsActive,
@@ -80,7 +80,7 @@ namespace AutotaskNET.Entities
                 UserDefinedFields = Array.ConvertAll(service.UserDefinedFields.ToArray(), UserDefinedField.ToATWS)
             };
 
-        } //end implicit operator net.autotask.webservices.Service(Service service)
+        } //end implicit operator ATWS.Service(Service service)
 
         #endregion //Constructors
 

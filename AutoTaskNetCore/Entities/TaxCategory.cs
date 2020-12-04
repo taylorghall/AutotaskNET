@@ -22,20 +22,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TaxCategory() : base() { } //end TaxCategory()
-        public TaxCategory(net.autotask.webservices.TaxCategory entity) : base(entity)
+        public TaxCategory(ATWS.TaxCategory entity) : base(entity)
         {
 
-        } //end TaxCategory(net.autotask.webservices.TaxCategory entity)
+        } //end TaxCategory(ATWS.TaxCategory entity)
 
-        public static implicit operator net.autotask.webservices.TaxCategory(TaxCategory taxcategory)
+        public static implicit operator ATWS.TaxCategory(TaxCategory taxcategory)
         {
-            return new net.autotask.webservices.TaxCategory()
+            return new ATWS.TaxCategory()
             {
                 id = taxcategory.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TaxCategory(TaxCategory taxcategory)
+        } //end implicit operator ATWS.TaxCategory(TaxCategory taxcategory)
 
         #endregion //Constructors
 

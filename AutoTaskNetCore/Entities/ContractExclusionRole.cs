@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractExclusionRole() : base() { } //end ContractExclusionRole()
-        public ContractExclusionRole(net.autotask.webservices.ContractExclusionRole entity) : base(entity)
+        public ContractExclusionRole(ATWS.ContractExclusionRole entity) : base(entity)
         {
 
-        } //end ContractExclusionRole(net.autotask.webservices.ContractExclusionRole entity)
+        } //end ContractExclusionRole(ATWS.ContractExclusionRole entity)
 
-        public static implicit operator net.autotask.webservices.ContractExclusionRole(ContractExclusionRole contractexclusionrole)
+        public static implicit operator ATWS.ContractExclusionRole(ContractExclusionRole contractexclusionrole)
         {
-            return new net.autotask.webservices.ContractExclusionRole()
+            return new ATWS.ContractExclusionRole()
             {
                 id = contractexclusionrole.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractExclusionRole(ContractExclusionRole contractexclusionrole)
+        } //end implicit operator ATWS.ContractExclusionRole(ContractExclusionRole contractexclusionrole)
 
         #endregion //Constructors
 

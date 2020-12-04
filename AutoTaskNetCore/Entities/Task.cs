@@ -21,7 +21,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Task() : base() { } //end Task()
-        public Task(net.autotask.webservices.Task entity) : base(entity)
+        public Task(ATWS.Task entity) : base(entity)
         {
             this.AllocationCodeID = entity.AllocationCodeID == null ? default(int?) : int.Parse(entity.AllocationCodeID.ToString());
             this.AssignedResourceID = entity.AssignedResourceID == null ? default(int?) : int.Parse(entity.AssignedResourceID.ToString());
@@ -56,17 +56,17 @@ namespace AutotaskNET.Entities
             this.TaskType = int.Parse(entity.TaskType.ToString());
             this.Title = entity.Title == null ? default(string) : entity.Title.ToString();
 
-        } //end Task(net.autotask.webservices.Task entity)
+        } //end Task(ATWS.Task entity)
 
-        public static implicit operator net.autotask.webservices.Task(Task task)
+        public static implicit operator ATWS.Task(Task task)
         {
-            return new net.autotask.webservices.Task()
+            return new ATWS.Task()
             {
                 id = task.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Task(Task task)
+        } //end implicit operator ATWS.Task(Task task)
 
         #endregion //Constructors
 

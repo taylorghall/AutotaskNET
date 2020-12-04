@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountNote() : base() { } //end AccountNote()
-        public AccountNote(net.autotask.webservices.AccountNote entity) : base(entity)
+        public AccountNote(ATWS.AccountNote entity) : base(entity)
         {
             var thisType = GetType();
             var fields = GetType().GetFields();
@@ -51,11 +51,11 @@ namespace AutotaskNET.Entities
             }
 
 
-        } //end AccountNote(net.autotask.webservices.AccountNote entity)
+        } //end AccountNote(ATWS.AccountNote entity)
 
-        public static implicit operator net.autotask.webservices.AccountNote(AccountNote entity)
+        public static implicit operator ATWS.AccountNote(AccountNote entity)
         {
-            var newEntity = new net.autotask.webservices.AccountNote();
+            var newEntity = new ATWS.AccountNote();
             var entityReflection = newEntity.GetType();
             var thisType = entity.GetType();
             var fields = entity.GetType().GetFields();
@@ -87,7 +87,7 @@ namespace AutotaskNET.Entities
             }
 
             return newEntity;
-        } //end implicit operator net.autotask.webservices.AccountNote(AccountNote accountnote)
+        } //end implicit operator ATWS.AccountNote(AccountNote accountnote)
 
         #endregion //Constructors
 

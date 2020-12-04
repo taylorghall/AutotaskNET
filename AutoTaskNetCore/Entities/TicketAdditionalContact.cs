@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketAdditionalContact() : base() { } //end TicketAdditionalContact()
-        public TicketAdditionalContact(net.autotask.webservices.TicketAdditionalContact entity) : base(entity)
+        public TicketAdditionalContact(ATWS.TicketAdditionalContact entity) : base(entity)
         {
 
-        } //end TicketAdditionalContact(net.autotask.webservices.TicketAdditionalContact entity)
+        } //end TicketAdditionalContact(ATWS.TicketAdditionalContact entity)
 
-        public static implicit operator net.autotask.webservices.TicketAdditionalContact(TicketAdditionalContact ticketadditionalcontact)
+        public static implicit operator ATWS.TicketAdditionalContact(TicketAdditionalContact ticketadditionalcontact)
         {
-            return new net.autotask.webservices.TicketAdditionalContact()
+            return new ATWS.TicketAdditionalContact()
             {
                 id = ticketadditionalcontact.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketAdditionalContact(TicketAdditionalContact ticketadditionalcontact)
+        } //end implicit operator ATWS.TicketAdditionalContact(TicketAdditionalContact ticketadditionalcontact)
 
         #endregion //Constructors
 

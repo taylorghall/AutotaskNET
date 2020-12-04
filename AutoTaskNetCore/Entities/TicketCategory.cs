@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketCategory() : base() { } //end TicketCategory()
-        public TicketCategory(net.autotask.webservices.TicketCategory entity) : base(entity)
+        public TicketCategory(ATWS.TicketCategory entity) : base(entity)
         {
 
-        } //end TicketCategory(net.autotask.webservices.TicketCategory entity)
+        } //end TicketCategory(ATWS.TicketCategory entity)
 
-        public static implicit operator net.autotask.webservices.TicketCategory(TicketCategory ticketcategory)
+        public static implicit operator ATWS.TicketCategory(TicketCategory ticketcategory)
         {
-            return new net.autotask.webservices.TicketCategory()
+            return new ATWS.TicketCategory()
             {
                 id = ticketcategory.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketCategory(TicketCategory ticketcategory)
+        } //end implicit operator ATWS.TicketCategory(TicketCategory ticketcategory)
 
         #endregion //Constructors
 

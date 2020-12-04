@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AllocationCode() : base() { } //end AllocationCode()
-        public AllocationCode(net.autotask.webservices.AllocationCode entity) : base(entity)
+        public AllocationCode(ATWS.AllocationCode entity) : base(entity)
         {
 
-        } //end AllocationCode(net.autotask.webservices.AllocationCode entity)
+        } //end AllocationCode(ATWS.AllocationCode entity)
 
-        public static implicit operator net.autotask.webservices.AllocationCode(AllocationCode allocationcode)
+        public static implicit operator ATWS.AllocationCode(AllocationCode allocationcode)
         {
-            return new net.autotask.webservices.AllocationCode()
+            return new ATWS.AllocationCode()
             {
                 id = allocationcode.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AllocationCode(AllocationCode allocationcode)
+        } //end implicit operator ATWS.AllocationCode(AllocationCode allocationcode)
 
         #endregion //Constructors
 

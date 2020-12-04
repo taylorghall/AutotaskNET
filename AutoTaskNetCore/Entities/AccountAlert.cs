@@ -24,21 +24,21 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountAlert() : base() { } //end AccountAlert()
-        public AccountAlert(net.autotask.webservices.AccountAlert entity) : base(entity)
+        public AccountAlert(ATWS.AccountAlert entity) : base(entity)
         {
 
-        } //end AccountAlert(net.autotask.webservices.AccountAlert entity)
+        } //end AccountAlert(ATWS.AccountAlert entity)
 
-        public static implicit operator net.autotask.webservices.AccountAlert(AccountAlert accountalert)
+        public static implicit operator ATWS.AccountAlert(AccountAlert accountalert)
         {
-            return new net.autotask.webservices.AccountAlert()
+            return new ATWS.AccountAlert()
             {
                 id = accountalert.id,
                 AccountID = accountalert.AccountID,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AccountAlert(AccountAlert accountalert)
+        } //end implicit operator ATWS.AccountAlert(AccountAlert accountalert)
 
         #endregion //Constructors
 

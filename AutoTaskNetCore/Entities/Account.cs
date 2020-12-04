@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Account() : base() { } //end Account()
-        public Account(net.autotask.webservices.Account entity) : base(entity)
+        public Account(ATWS.Account entity) : base(entity)
         {
             this.AccountName = entity.AccountName == null ? default(string) : entity.AccountName.ToString();
             this.AccountNumber = entity.AccountNumber == null ? default(string) : entity.AccountNumber.ToString();
@@ -80,11 +80,11 @@ namespace AutotaskNET.Entities
             this.UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.Account(Account account)
+        public static implicit operator ATWS.Account(Account account)
         {
-            return new net.autotask.webservices.Account()
+            return new ATWS.Account()
             {
                 id = account.id,
                 AccountName = account.AccountName,
@@ -142,7 +142,7 @@ namespace AutotaskNET.Entities
                 UserDefinedFields = account.UserDefinedFields==null ? default : Array.ConvertAll(account.UserDefinedFields?.ToArray(), UserDefinedField.ToATWS)
             };
 
-        } //end implicit operator net.autotask.webservices.Account(Account account)
+        } //end implicit operator ATWS.Account(Account account)
 
         #endregion //Constructors
 

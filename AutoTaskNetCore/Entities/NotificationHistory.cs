@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public NotificationHistory() : base() { } //end NotificationHistory()
-        public NotificationHistory(net.autotask.webservices.NotificationHistory entity) : base(entity)
+        public NotificationHistory(ATWS.NotificationHistory entity) : base(entity)
         {
 
-        } //end NotificationHistory(net.autotask.webservices.NotificationHistory entity)
+        } //end NotificationHistory(ATWS.NotificationHistory entity)
 
-        public static implicit operator net.autotask.webservices.NotificationHistory(NotificationHistory notificationhistory)
+        public static implicit operator ATWS.NotificationHistory(NotificationHistory notificationhistory)
         {
-            return new net.autotask.webservices.NotificationHistory()
+            return new ATWS.NotificationHistory()
             {
                 id = notificationhistory.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.NotificationHistory(NotificationHistory notificationhistory)
+        } //end implicit operator ATWS.NotificationHistory(NotificationHistory notificationhistory)
 
         #endregion //Constructors
 

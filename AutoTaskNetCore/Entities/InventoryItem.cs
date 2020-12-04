@@ -25,20 +25,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InventoryItem() : base() { } //end InventoryItem()
-        public InventoryItem(net.autotask.webservices.InventoryItem entity) : base(entity)
+        public InventoryItem(ATWS.InventoryItem entity) : base(entity)
         {
 
-        } //end InventoryItem(net.autotask.webservices.InventoryItem entity)
+        } //end InventoryItem(ATWS.InventoryItem entity)
 
-        public static implicit operator net.autotask.webservices.InventoryItem(InventoryItem inventoryitem)
+        public static implicit operator ATWS.InventoryItem(InventoryItem inventoryitem)
         {
-            return new net.autotask.webservices.InventoryItem()
+            return new ATWS.InventoryItem()
             {
                 id = inventoryitem.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InventoryItem(InventoryItem inventoryitem)
+        } //end implicit operator ATWS.InventoryItem(InventoryItem inventoryitem)
 
         #endregion //Constructors
 

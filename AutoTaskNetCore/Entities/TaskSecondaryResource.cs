@@ -23,23 +23,23 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TaskSecondaryResource() : base() { } //end TaskSecondaryResource()
-        public TaskSecondaryResource(net.autotask.webservices.TaskSecondaryResource entity) : base(entity)
+        public TaskSecondaryResource(ATWS.TaskSecondaryResource entity) : base(entity)
         {
             this.ResourceID = int.Parse(entity.ResourceID.ToString());
             this.RoleID = int.Parse(entity.RoleID.ToString());
             this.TaskID = int.Parse(entity.TaskID.ToString());
 
-        } //end TaskSecondaryResource(net.autotask.webservices.TaskSecondaryResource entity)
+        } //end TaskSecondaryResource(ATWS.TaskSecondaryResource entity)
 
-        public static implicit operator net.autotask.webservices.TaskSecondaryResource(TaskSecondaryResource tasksecondaryresource)
+        public static implicit operator ATWS.TaskSecondaryResource(TaskSecondaryResource tasksecondaryresource)
         {
-            return new net.autotask.webservices.TaskSecondaryResource()
+            return new ATWS.TaskSecondaryResource()
             {
                 id = tasksecondaryresource.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TaskSecondaryResource(TaskSecondaryResource tasksecondaryresource)
+        } //end implicit operator ATWS.TaskSecondaryResource(TaskSecondaryResource tasksecondaryresource)
 
         #endregion //Constructors
 

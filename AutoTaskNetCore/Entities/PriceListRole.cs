@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public PriceListRole() : base() { } //end PriceListRole()
-        public PriceListRole(net.autotask.webservices.PriceListRole entity) : base(entity)
+        public PriceListRole(ATWS.PriceListRole entity) : base(entity)
         {
 
-        } //end PriceListRole(net.autotask.webservices.PriceListRole entity)
+        } //end PriceListRole(ATWS.PriceListRole entity)
 
-        public static implicit operator net.autotask.webservices.PriceListRole(PriceListRole pricelistrole)
+        public static implicit operator ATWS.PriceListRole(PriceListRole pricelistrole)
         {
-            return new net.autotask.webservices.PriceListRole()
+            return new ATWS.PriceListRole()
             {
                 id = pricelistrole.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.PriceListRole(PriceListRole pricelistrole)
+        } //end implicit operator ATWS.PriceListRole(PriceListRole pricelistrole)
 
         #endregion //Constructors
 

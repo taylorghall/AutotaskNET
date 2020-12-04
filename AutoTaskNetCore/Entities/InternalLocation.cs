@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InternalLocation() : base() { } //end InternalLocation()
-        public InternalLocation(net.autotask.webservices.InternalLocation entity) : base(entity)
+        public InternalLocation(ATWS.InternalLocation entity) : base(entity)
         {
 
-        } //end InternalLocation(net.autotask.webservices.InternalLocation entity)
+        } //end InternalLocation(ATWS.InternalLocation entity)
 
-        public static implicit operator net.autotask.webservices.InternalLocation(InternalLocation internallocation)
+        public static implicit operator ATWS.InternalLocation(InternalLocation internallocation)
         {
-            return new net.autotask.webservices.InternalLocation()
+            return new ATWS.InternalLocation()
             {
                 id = internallocation.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InternalLocation(InternalLocation internallocation)
+        } //end implicit operator ATWS.InternalLocation(InternalLocation internallocation)
 
         #endregion //Constructors
 

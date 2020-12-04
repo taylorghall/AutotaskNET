@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TaskNote() : base() { } //end TaskNote()
-        public TaskNote(net.autotask.webservices.TaskNote entity) : base(entity)
+        public TaskNote(ATWS.TaskNote entity) : base(entity)
         {
             this.CreatorResourceID = entity.CreatorResourceID == null ? default(int?) : int.Parse(entity.CreatorResourceID.ToString());
             this.Description = entity.Description == null ? default(string) : entity.Description.ToString();
@@ -33,17 +33,17 @@ namespace AutotaskNET.Entities
             this.TaskID = int.Parse(entity.TaskID.ToString());
             this.Title = entity.Title == null ? default(string) : entity.Title.ToString();
 
-        } //end TaskNote(net.autotask.webservices.TaskNote entity)
+        } //end TaskNote(ATWS.TaskNote entity)
 
-        public static implicit operator net.autotask.webservices.TaskNote(TaskNote tasknote)
+        public static implicit operator ATWS.TaskNote(TaskNote tasknote)
         {
-            return new net.autotask.webservices.TaskNote()
+            return new ATWS.TaskNote()
             {
                 id = tasknote.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TaskNote(TaskNote tasknote)
+        } //end implicit operator ATWS.TaskNote(TaskNote tasknote)
 
         #endregion //Constructors
 

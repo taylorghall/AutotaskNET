@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TaskPredecessor() : base() { } //end TaskPredecessor()
-        public TaskPredecessor(net.autotask.webservices.TaskPredecessor entity) : base(entity)
+        public TaskPredecessor(ATWS.TaskPredecessor entity) : base(entity)
         {
 
-        } //end TaskPredecessor(net.autotask.webservices.TaskPredecessor entity)
+        } //end TaskPredecessor(ATWS.TaskPredecessor entity)
 
-        public static implicit operator net.autotask.webservices.TaskPredecessor(TaskPredecessor taskpredecessor)
+        public static implicit operator ATWS.TaskPredecessor(TaskPredecessor taskpredecessor)
         {
-            return new net.autotask.webservices.TaskPredecessor()
+            return new ATWS.TaskPredecessor()
             {
                 id = taskpredecessor.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TaskPredecessor(TaskPredecessor taskpredecessor)
+        } //end implicit operator ATWS.TaskPredecessor(TaskPredecessor taskpredecessor)
 
         #endregion //Constructors
 

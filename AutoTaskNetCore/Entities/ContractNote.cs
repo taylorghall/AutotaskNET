@@ -25,7 +25,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractNote() : base() { } //end ContractNote()
-        public ContractNote(net.autotask.webservices.ContractNote entity) : base(entity)
+        public ContractNote(ATWS.ContractNote entity) : base(entity)
         {
             id = entity.id;
             ContractID = entity.ContractID?.ToString();
@@ -35,11 +35,11 @@ namespace AutotaskNET.Entities
             Title = entity.Title?.ToString();
             UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
-        } //end ContractNote(net.autotask.webservices.ContractNote entity)
+        } //end ContractNote(ATWS.ContractNote entity)
 
-        public static implicit operator net.autotask.webservices.ContractNote(ContractNote contractnote)
+        public static implicit operator ATWS.ContractNote(ContractNote contractnote)
         {
-            return new net.autotask.webservices.ContractNote()
+            return new ATWS.ContractNote()
             {
                 id = contractnote.id,
                 ContractID = contractnote.id,
@@ -47,10 +47,10 @@ namespace AutotaskNET.Entities
                 CreatorResourceID = contractnote.CreatorResourceID,
                 LastActivityDate = contractnote.LastActivityDate,
                 Title = contractnote.Title,
-                UserDefinedFields = Array.ConvertAll(contractnote.UserDefinedFields.ToArray(), new Converter<UserDefinedField, net.autotask.webservices.UserDefinedField>(UserDefinedField.ToATWS))
+                UserDefinedFields = Array.ConvertAll(contractnote.UserDefinedFields.ToArray(), new Converter<UserDefinedField, ATWS.UserDefinedField>(UserDefinedField.ToATWS))
             };
 
-        } //end implicit operator net.autotask.webservices.ContractNote(ContractNote contractnote)
+        } //end implicit operator ATWS.ContractNote(ContractNote contractnote)
 
         #endregion //Constructors
 

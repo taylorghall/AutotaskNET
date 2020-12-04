@@ -21,22 +21,22 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountLocation() : base() { } //end AccountLocation()
-        public AccountLocation(net.autotask.webservices.AccountLocation entity) : base(entity)
+        public AccountLocation(ATWS.AccountLocation entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.LocationName = entity.LocationName == null ? default(string) : entity.LocationName.ToString();
 
-        } //end AccountLocation(net.autotask.webservices.AccountLocation entity)
+        } //end AccountLocation(ATWS.AccountLocation entity)
 
-        public static implicit operator net.autotask.webservices.AccountLocation(AccountLocation accountlocation)
+        public static implicit operator ATWS.AccountLocation(AccountLocation accountlocation)
         {
-            return new net.autotask.webservices.AccountLocation()
+            return new ATWS.AccountLocation()
             {
                 id = accountlocation.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AccountLocation(AccountLocation accountlocation)
+        } //end implicit operator ATWS.AccountLocation(AccountLocation accountlocation)
 
         #endregion //Constructors
 

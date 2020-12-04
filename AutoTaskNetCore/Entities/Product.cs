@@ -27,23 +27,23 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Product() : base() { } //end Product()
-        public Product(net.autotask.webservices.Product entity) : base(entity)
+        public Product(ATWS.Product entity) : base(entity)
         {
             id = entity.id;
             Name = entity.Name?.ToString();
             Description = entity.Description?.ToString();
             SKU = entity.SKU?.ToString();
             ProductCategory = entity.ProductCategory == null ? default(int?) : int.Parse(entity.ProductCategory.ToString());
-        } //end Product(net.autotask.webservices.Product entity)
+        } //end Product(ATWS.Product entity)
 
-        public static implicit operator net.autotask.webservices.Product(Product product)
+        public static implicit operator ATWS.Product(Product product)
         {
-            return new net.autotask.webservices.Product()
+            return new ATWS.Product()
             {
                 id = product.id,
             };
 
-        } //end implicit operator net.autotask.webservices.Product(Product product)
+        } //end implicit operator ATWS.Product(Product product)
 
         #endregion //Constructors
 

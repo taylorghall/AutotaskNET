@@ -21,22 +21,22 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ServiceCallTaskResource() : base() { } //end ServiceCallTaskResource()
-        public ServiceCallTaskResource(net.autotask.webservices.ServiceCallTaskResource entity) : base(entity)
+        public ServiceCallTaskResource(ATWS.ServiceCallTaskResource entity) : base(entity)
         {
             this.ResourceID = int.Parse(entity.ResourceID.ToString());
             this.ServiceCallTaskID = int.Parse(entity.ServiceCallTaskID.ToString());
 
-        } //end ServiceCallTaskResource(net.autotask.webservices.ServiceCallTaskResource entity)
+        } //end ServiceCallTaskResource(ATWS.ServiceCallTaskResource entity)
 
-        public static implicit operator net.autotask.webservices.ServiceCallTaskResource(ServiceCallTaskResource servicecalltaskresource)
+        public static implicit operator ATWS.ServiceCallTaskResource(ServiceCallTaskResource servicecalltaskresource)
         {
-            return new net.autotask.webservices.ServiceCallTaskResource()
+            return new ATWS.ServiceCallTaskResource()
             {
                 id = servicecalltaskresource.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ServiceCallTaskResource(ServiceCallTaskResource servicecalltaskresource)
+        } //end implicit operator ATWS.ServiceCallTaskResource(ServiceCallTaskResource servicecalltaskresource)
 
         #endregion //Constructors
 

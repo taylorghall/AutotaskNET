@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractRate() : base() { } //end ContractRate()
-        public ContractRate(net.autotask.webservices.ContractRate entity) : base(entity)
+        public ContractRate(ATWS.ContractRate entity) : base(entity)
         {
 
-        } //end ContractRate(net.autotask.webservices.ContractRate entity)
+        } //end ContractRate(ATWS.ContractRate entity)
 
-        public static implicit operator net.autotask.webservices.ContractRate(ContractRate contractrate)
+        public static implicit operator ATWS.ContractRate(ContractRate contractrate)
         {
-            return new net.autotask.webservices.ContractRate()
+            return new ATWS.ContractRate()
             {
                 id = contractrate.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractRate(ContractRate contractrate)
+        } //end implicit operator ATWS.ContractRate(ContractRate contractrate)
 
         #endregion //Constructors
 

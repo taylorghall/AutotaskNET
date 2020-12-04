@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AttachmentInfo() : base() { } //end AttachmentInfo()
-        public AttachmentInfo(net.autotask.webservices.AttachmentInfo entity)
+        public AttachmentInfo(ATWS.AttachmentInfo entity)
         {
 
-        } //end AttachmentInfo(net.autotask.webservices.AttachmentInfo entity)
+        } //end AttachmentInfo(ATWS.AttachmentInfo entity)
 
-        public static implicit operator net.autotask.webservices.AttachmentInfo(AttachmentInfo attachmentinfo)
+        public static implicit operator ATWS.AttachmentInfo(AttachmentInfo attachmentinfo)
         {
-            return new net.autotask.webservices.AttachmentInfo()
+            return new ATWS.AttachmentInfo()
             {
                 id = attachmentinfo.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AttachmentInfo(AttachmentInfo attachmentinfo)
+        } //end implicit operator ATWS.AttachmentInfo(AttachmentInfo attachmentinfo)
 
         #endregion //Constructors
 

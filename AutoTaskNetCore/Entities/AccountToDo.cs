@@ -24,7 +24,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountToDo() : base() { } //end AccountToDo()
-        public AccountToDo(net.autotask.webservices.AccountToDo entity) : base(entity)
+        public AccountToDo(ATWS.AccountToDo entity) : base(entity)
         {
             this.AccountID = long.Parse(entity.AccountID.ToString());
             this.ActionType = int.Parse(entity.ActionType.ToString());
@@ -41,17 +41,17 @@ namespace AutotaskNET.Entities
             this.StartDateTime = DateTime.Parse(entity.StartDateTime.ToString()); ;
             this.TicketID = entity.TicketID == null ? default(long?) : long.Parse(entity.TicketID.ToString());
 
-        } //end AccountToDo(net.autotask.webservices.AccountToDo entity)
+        } //end AccountToDo(ATWS.AccountToDo entity)
 
-        public static implicit operator net.autotask.webservices.AccountToDo(AccountToDo accounttodo)
+        public static implicit operator ATWS.AccountToDo(AccountToDo accounttodo)
         {
-            return new net.autotask.webservices.AccountToDo()
+            return new ATWS.AccountToDo()
             {
                 id = accounttodo.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AccountToDo(AccountToDo accounttodo)
+        } //end implicit operator ATWS.AccountToDo(AccountToDo accounttodo)
 
         #endregion //Constructors
 

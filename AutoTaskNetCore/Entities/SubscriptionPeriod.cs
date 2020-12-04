@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public SubscriptionPeriod() : base() { } //end SubscriptionPeriod()
-        public SubscriptionPeriod(net.autotask.webservices.SubscriptionPeriod entity) : base(entity)
+        public SubscriptionPeriod(ATWS.SubscriptionPeriod entity) : base(entity)
         {
 
-        } //end SubscriptionPeriod(net.autotask.webservices.SubscriptionPeriod entity)
+        } //end SubscriptionPeriod(ATWS.SubscriptionPeriod entity)
 
-        public static implicit operator net.autotask.webservices.SubscriptionPeriod(SubscriptionPeriod subscriptionperiod)
+        public static implicit operator ATWS.SubscriptionPeriod(SubscriptionPeriod subscriptionperiod)
         {
-            return new net.autotask.webservices.SubscriptionPeriod()
+            return new ATWS.SubscriptionPeriod()
             {
                 id = subscriptionperiod.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.SubscriptionPeriod(SubscriptionPeriod subscriptionperiod)
+        } //end implicit operator ATWS.SubscriptionPeriod(SubscriptionPeriod subscriptionperiod)
 
         #endregion //Constructors
 

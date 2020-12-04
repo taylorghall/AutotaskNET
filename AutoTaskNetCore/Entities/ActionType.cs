@@ -23,24 +23,24 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ActionType() : base() { } //end ActionType()
-        public ActionType(net.autotask.webservices.ActionType entity) : base(entity)
+        public ActionType(ATWS.ActionType entity) : base(entity)
         {
             this.Active = bool.Parse(entity.Active.ToString());
             this.Name = entity.Name == null ? default(string) : entity.Name.ToString();
             this.SystemActionType = entity.SystemActionType == null ? default(bool?) : bool.Parse(entity.SystemActionType.ToString());
             this.View = int.Parse(entity.View.ToString());
 
-        } //end ActionType(net.autotask.webservices.ActionType entity)
+        } //end ActionType(ATWS.ActionType entity)
 
-        public static implicit operator net.autotask.webservices.ActionType(ActionType actiontype)
+        public static implicit operator ATWS.ActionType(ActionType actiontype)
         {
-            return new net.autotask.webservices.ActionType()
+            return new ATWS.ActionType()
             {
                 id = actiontype.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ActionType(ActionType actiontype)
+        } //end implicit operator ATWS.ActionType(ActionType actiontype)
 
         #endregion //Constructors
 

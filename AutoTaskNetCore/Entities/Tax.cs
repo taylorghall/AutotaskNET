@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Tax() : base() { } //end Tax()
-        public Tax(net.autotask.webservices.Tax entity) : base(entity)
+        public Tax(ATWS.Tax entity) : base(entity)
         {
 
-        } //end Tax(net.autotask.webservices.Tax entity)
+        } //end Tax(ATWS.Tax entity)
 
-        public static implicit operator net.autotask.webservices.Tax(Tax tax)
+        public static implicit operator ATWS.Tax(Tax tax)
         {
-            return new net.autotask.webservices.Tax()
+            return new ATWS.Tax()
             {
                 id = tax.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Tax(Tax tax)
+        } //end implicit operator ATWS.Tax(Tax tax)
 
         #endregion //Constructors
 

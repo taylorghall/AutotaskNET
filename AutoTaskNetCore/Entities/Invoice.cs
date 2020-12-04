@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Invoice() : base() { } //end Invoice()
-        public Invoice(net.autotask.webservices.Invoice entity) : base(entity)
+        public Invoice(ATWS.Invoice entity) : base(entity)
         {
 
-        } //end Invoice(net.autotask.webservices.Invoice entity)
+        } //end Invoice(ATWS.Invoice entity)
 
-        public static implicit operator net.autotask.webservices.Invoice(Invoice invoice)
+        public static implicit operator ATWS.Invoice(Invoice invoice)
         {
-            return new net.autotask.webservices.Invoice()
+            return new ATWS.Invoice()
             {
                 id = invoice.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Invoice(Invoice invoice)
+        } //end implicit operator ATWS.Invoice(Invoice invoice)
 
         #endregion //Constructors
 

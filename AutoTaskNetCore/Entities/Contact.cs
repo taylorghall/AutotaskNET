@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Contact() : base() { } //end Contact()
-        public Contact(net.autotask.webservices.Contact entity) : base(entity)
+        public Contact(ATWS.Contact entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.AccountPhysicalLocationID = entity.AccountPhysicalLocationID == null ? default(int?) : int.Parse(entity.AccountPhysicalLocationID.ToString());
@@ -68,11 +68,11 @@ namespace AutotaskNET.Entities
             this.ZipCode = entity.ZipCode == null ? default(string) : entity.ZipCode.ToString();
             UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
-        } //end Contact(net.autotask.webservices.Contact entity)
+        } //end Contact(ATWS.Contact entity)
 
-        public static implicit operator net.autotask.webservices.Contact(Contact contact)
+        public static implicit operator ATWS.Contact(Contact contact)
         {
-            return new net.autotask.webservices.Contact()
+            return new ATWS.Contact()
             {
                 id = contact.id,
                 AccountID = contact.AccountID ,
@@ -120,7 +120,7 @@ namespace AutotaskNET.Entities
 
             };
 
-        } //end implicit operator net.autotask.webservices.Contact(Contact contact)
+        } //end implicit operator ATWS.Contact(Contact contact)
 
         #endregion //Constructors
 

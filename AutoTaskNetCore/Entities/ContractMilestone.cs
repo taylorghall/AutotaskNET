@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractMilestone() : base() { } //end ContractMilestone()
-        public ContractMilestone(net.autotask.webservices.ContractMilestone entity) : base(entity)
+        public ContractMilestone(ATWS.ContractMilestone entity) : base(entity)
         {
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.ContractMilestone(ContractMilestone contractmilestone)
+        public static implicit operator ATWS.ContractMilestone(ContractMilestone contractmilestone)
         {
-            return new net.autotask.webservices.ContractMilestone()
+            return new ATWS.ContractMilestone()
             {
                 id = contractmilestone.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractMilestone(ContractMilestone contractmilestone)
+        } //end implicit operator ATWS.ContractMilestone(ContractMilestone contractmilestone)
 
         #endregion //Constructors
 

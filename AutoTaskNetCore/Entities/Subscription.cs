@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Subscription() : base() { } //end Subscription()
-        public Subscription(net.autotask.webservices.Subscription entity) : base(entity)
+        public Subscription(ATWS.Subscription entity) : base(entity)
         {
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.Subscription(Subscription subscription)
+        public static implicit operator ATWS.Subscription(Subscription subscription)
         {
-            return new net.autotask.webservices.Subscription()
+            return new ATWS.Subscription()
             {
                 id = subscription.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Subscription(Subscription subscription)
+        } //end implicit operator ATWS.Subscription(Subscription subscription)
 
         #endregion //Constructors
 

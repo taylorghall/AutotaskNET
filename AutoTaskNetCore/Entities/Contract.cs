@@ -25,7 +25,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Contract() : base() { } //end Contract()
-        public Contract(net.autotask.webservices.Contract entity) : base(entity)
+        public Contract(ATWS.Contract entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.BillingPreference = entity.BillingPreference == null ? default(int?) : int.Parse(entity.BillingPreference.ToString());
@@ -58,11 +58,11 @@ namespace AutotaskNET.Entities
             this.SetupFee = entity.SetupFee == null ? default(double?) : double.Parse(entity.SetupFee.ToString());
             this.SetupFeeAllocationCodeID = entity.SetupFeeAllocationCodeID == null ? default(long?) : long.Parse(entity.SetupFeeAllocationCodeID.ToString());
 
-        } //end Contract(net.autotask.webservices.Contract entity)
+        } //end Contract(ATWS.Contract entity)
 
-        public static implicit operator net.autotask.webservices.Contract(Contract contract)
+        public static implicit operator ATWS.Contract(Contract contract)
         {
-            return new net.autotask.webservices.Contract()
+            return new ATWS.Contract()
             {
                 id = contract.id,
                 AccountID = contract.AccountID,
@@ -97,7 +97,7 @@ namespace AutotaskNET.Entities
                 TimeReportingRequiresStartAndStopTimes = contract.TimeReportingRequiresStartAndStopTimes
             };
 
-        } //end implicit operator net.autotask.webservices.Contract(Contract contract)
+        } //end implicit operator ATWS.Contract(Contract contract)
 
         #endregion //Constructors
 

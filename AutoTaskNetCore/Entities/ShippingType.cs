@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ShippingType() : base() { } //end ShippingType()
-        public ShippingType(net.autotask.webservices.ShippingType entity) : base(entity)
+        public ShippingType(ATWS.ShippingType entity) : base(entity)
         {
 
-        } //end ShippingType(net.autotask.webservices.ShippingType entity)
+        } //end ShippingType(ATWS.ShippingType entity)
 
-        public static implicit operator net.autotask.webservices.ShippingType(ShippingType shippingtype)
+        public static implicit operator ATWS.ShippingType(ShippingType shippingtype)
         {
-            return new net.autotask.webservices.ShippingType()
+            return new ATWS.ShippingType()
             {
                 id = shippingtype.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ShippingType(ShippingType shippingtype)
+        } //end implicit operator ATWS.ShippingType(ShippingType shippingtype)
 
         #endregion //Constructors
 

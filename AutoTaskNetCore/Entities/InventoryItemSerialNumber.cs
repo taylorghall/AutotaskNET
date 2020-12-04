@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InventoryItemSerialNumber() : base() { } //end InventoryItemSerialNumber()
-        public InventoryItemSerialNumber(net.autotask.webservices.InventoryItemSerialNumber entity) : base(entity)
+        public InventoryItemSerialNumber(ATWS.InventoryItemSerialNumber entity) : base(entity)
         {
 
-        } //end InventoryItemSerialNumber(net.autotask.webservices.InventoryItemSerialNumber entity)
+        } //end InventoryItemSerialNumber(ATWS.InventoryItemSerialNumber entity)
 
-        public static implicit operator net.autotask.webservices.InventoryItemSerialNumber(InventoryItemSerialNumber inventoryitemserialnumber)
+        public static implicit operator ATWS.InventoryItemSerialNumber(InventoryItemSerialNumber inventoryitemserialnumber)
         {
-            return new net.autotask.webservices.InventoryItemSerialNumber()
+            return new ATWS.InventoryItemSerialNumber()
             {
                 id = inventoryitemserialnumber.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InventoryItemSerialNumber(InventoryItemSerialNumber inventoryitemserialnumber)
+        } //end implicit operator ATWS.InventoryItemSerialNumber(InventoryItemSerialNumber inventoryitemserialnumber)
 
         #endregion //Constructors
 

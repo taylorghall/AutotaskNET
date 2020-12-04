@@ -26,20 +26,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractRetainer() : base() { } //end ContractRetainer()
-        public ContractRetainer(net.autotask.webservices.ContractRetainer entity) : base(entity)
+        public ContractRetainer(ATWS.ContractRetainer entity) : base(entity)
         {
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.ContractRetainer(ContractRetainer contractretainer)
+        public static implicit operator ATWS.ContractRetainer(ContractRetainer contractretainer)
         {
-            return new net.autotask.webservices.ContractRetainer()
+            return new ATWS.ContractRetainer()
             {
                 id = contractretainer.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractRetainer(ContractRetainer contractretainer)
+        } //end implicit operator ATWS.ContractRetainer(ContractRetainer contractretainer)
 
         #endregion //Constructors
 

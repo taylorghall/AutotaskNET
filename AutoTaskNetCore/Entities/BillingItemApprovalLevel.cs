@@ -23,14 +23,14 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public BillingItemApprovalLevel() : base() { } //end BillingItemApprovalLevel()
-        public BillingItemApprovalLevel(net.autotask.webservices.BillingItemApprovalLevel entity) : base(entity)
+        public BillingItemApprovalLevel(ATWS.BillingItemApprovalLevel entity) : base(entity)
         {
 
-        } //end BillingItemApprovalLevel(net.autotask.webservices.BillingItemApprovalLevel entity)
+        } //end BillingItemApprovalLevel(ATWS.BillingItemApprovalLevel entity)
 
-        public static implicit operator net.autotask.webservices.BillingItemApprovalLevel(BillingItemApprovalLevel billingitemapprovallevel)
+        public static implicit operator ATWS.BillingItemApprovalLevel(BillingItemApprovalLevel billingitemapprovallevel)
         {
-            return new net.autotask.webservices.BillingItemApprovalLevel()
+            return new ATWS.BillingItemApprovalLevel()
             {
                 id = billingitemapprovallevel.id,
 

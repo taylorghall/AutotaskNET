@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Entity() { } //end Entity()
-        public Entity(net.autotask.webservices.Entity entity)
+        public Entity(ATWS.Entity entity)
         {
             this.id = long.Parse(entity.id.ToString());
 
-        } //end Entity(net.autotask.webservices.Entity entity)
+        } //end Entity(ATWS.Entity entity)
 
         #endregion //Constructors
 
         /*
-        public static implicit operator net.autotask.webservices.Entity(Entity entity)
+        public static implicit operator ATWS.Entity(Entity entity)
         {
             return entity;
 
-        } //end implicit operator net.autotask.webservices.Entity(Entity entity)
+        } //end implicit operator ATWS.Entity(Entity entity)
         */
 
         #region Fields

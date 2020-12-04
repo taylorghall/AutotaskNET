@@ -25,20 +25,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ProductVendor() : base() { } //end ProductVendor()
-        public ProductVendor(net.autotask.webservices.ProductVendor entity) : base(entity)
+        public ProductVendor(ATWS.ProductVendor entity) : base(entity)
         {
 
-        } //end ProductVendor(net.autotask.webservices.ProductVendor entity)
+        } //end ProductVendor(ATWS.ProductVendor entity)
 
-        public static implicit operator net.autotask.webservices.ProductVendor(ProductVendor productvendor)
+        public static implicit operator ATWS.ProductVendor(ProductVendor productvendor)
         {
-            return new net.autotask.webservices.ProductVendor()
+            return new ATWS.ProductVendor()
             {
                 id = productvendor.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ProductVendor(ProductVendor productvendor)
+        } //end implicit operator ATWS.ProductVendor(ProductVendor productvendor)
 
         #endregion //Constructors
 

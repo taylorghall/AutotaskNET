@@ -21,7 +21,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Resource() : base() { } //end Resource()
-        public Resource(net.autotask.webservices.Resource entity) : base(entity)
+        public Resource(ATWS.Resource entity) : base(entity)
         {
             this.Active = bool.Parse(entity.Active.ToString());
             this.Email = entity.Email == null ? default(string) : entity.Email.ToString();
@@ -58,17 +58,17 @@ namespace AutotaskNET.Entities
             this.Title = entity.Title == null ? default(string) : entity.Title.ToString();
             this.TravelAvailabilityPct = entity.TravelAvailabilityPct == null ? default(string) : entity.TravelAvailabilityPct.ToString();
 
-        } //end Resource(net.autotask.webservices.Resource entity)
+        } //end Resource(ATWS.Resource entity)
 
-        public static implicit operator net.autotask.webservices.Resource(Resource resource)
+        public static implicit operator ATWS.Resource(Resource resource)
         {
-            return new net.autotask.webservices.Resource()
+            return new ATWS.Resource()
             {
                 id = resource.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Resource(Resource resource)
+        } //end implicit operator ATWS.Resource(Resource resource)
 
         #endregion //Constructors
 

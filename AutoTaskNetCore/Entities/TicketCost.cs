@@ -25,18 +25,18 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketCost() : base() { } //end TicketCost()
-        public TicketCost(net.autotask.webservices.TicketCost entity) : base(entity)
+        public TicketCost(ATWS.TicketCost entity) : base(entity)
         {
             //entity.AccountName == null ? default(string) : entity.AccountName.ToString();
             ProductID = entity.ProductID == null ? default : long.Parse(entity.ProductID.ToString());
             Billed = entity.Billed == null ? default : bool.Parse(entity.Billed.ToString());
             InternalPurchaseOrderNumber = entity.InternalPurchaseOrderNumber?.ToString();
             id = entity.id;
-        } //end TicketCost(net.autotask.webservices.TicketCost entity)
+        } //end TicketCost(ATWS.TicketCost entity)
 
-        public static implicit operator net.autotask.webservices.TicketCost(TicketCost ticketcost)
+        public static implicit operator ATWS.TicketCost(TicketCost ticketcost)
         {
-            return new net.autotask.webservices.TicketCost()
+            return new ATWS.TicketCost()
             {
                 id = ticketcost.id,
                 Billed = ticketcost.Billed,
@@ -45,7 +45,7 @@ namespace AutotaskNET.Entities
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketCost(TicketCost ticketcost)
+        } //end implicit operator ATWS.TicketCost(TicketCost ticketcost)
 
         #endregion //Constructors
 

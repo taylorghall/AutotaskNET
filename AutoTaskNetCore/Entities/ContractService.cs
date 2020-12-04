@@ -27,7 +27,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractService() : base() { } //end ContractService()
-        public ContractService(net.autotask.webservices.ContractService entity) : base(entity)
+        public ContractService(ATWS.ContractService entity) : base(entity)
         {
             this.id = entity.id;
             this.AdjustedPrice = entity.AdjustedPrice == null
@@ -43,11 +43,11 @@ namespace AutotaskNET.Entities
             this.UnitPrice = double.Parse(entity.UnitPrice.ToString());
             this.InvoiceDescription = entity.InvoiceDescription?.ToString();
             this.UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
-        } //end ContractService(net.autotask.webservices.ContractService entity)
+        } //end ContractService(ATWS.ContractService entity)
 
-        public static implicit operator net.autotask.webservices.ContractService(ContractService contractservice)
+        public static implicit operator ATWS.ContractService(ContractService contractservice)
         {
-            return new net.autotask.webservices.ContractService()
+            return new ATWS.ContractService()
             {
                 id = contractservice.id,
                 InvoiceDescription = contractservice.InvoiceDescription,
@@ -62,7 +62,7 @@ namespace AutotaskNET.Entities
                 ServiceID = contractservice.ServiceID,
             };
 
-        } //end implicit operator net.autotask.webservices.ContractService(ContractService contractservice)
+        } //end implicit operator ATWS.ContractService(ContractService contractservice)
 
         #endregion //Constructors
 

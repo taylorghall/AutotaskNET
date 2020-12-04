@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ResourceSkill() : base() { } //end ResourceSkill()
-        public ResourceSkill(net.autotask.webservices.ResourceSkill entity) : base(entity)
+        public ResourceSkill(ATWS.ResourceSkill entity) : base(entity)
         {
 
-        } //end ResourceSkill(net.autotask.webservices.ResourceSkill entity)
+        } //end ResourceSkill(ATWS.ResourceSkill entity)
 
-        public static implicit operator net.autotask.webservices.ResourceSkill(ResourceSkill resourceskill)
+        public static implicit operator ATWS.ResourceSkill(ResourceSkill resourceskill)
         {
-            return new net.autotask.webservices.ResourceSkill()
+            return new ATWS.ResourceSkill()
             {
                 id = resourceskill.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ResourceSkill(ResourceSkill resourceskill)
+        } //end implicit operator ATWS.ResourceSkill(ResourceSkill resourceskill)
 
         #endregion //Constructors
 

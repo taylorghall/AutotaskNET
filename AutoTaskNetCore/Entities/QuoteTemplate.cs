@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public QuoteTemplate() : base() { } //end QuoteTemplate()
-        public QuoteTemplate(net.autotask.webservices.QuoteTemplate entity) : base(entity)
+        public QuoteTemplate(ATWS.QuoteTemplate entity) : base(entity)
         {
 
-        } //end QuoteTemplate(net.autotask.webservices.QuoteTemplate entity)
+        } //end QuoteTemplate(ATWS.QuoteTemplate entity)
 
-        public static implicit operator net.autotask.webservices.QuoteTemplate(QuoteTemplate quotetemplate)
+        public static implicit operator ATWS.QuoteTemplate(QuoteTemplate quotetemplate)
         {
-            return new net.autotask.webservices.QuoteTemplate()
+            return new ATWS.QuoteTemplate()
             {
                 id = quotetemplate.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.QuoteTemplate(QuoteTemplate quotetemplate)
+        } //end implicit operator ATWS.QuoteTemplate(QuoteTemplate quotetemplate)
 
         #endregion //Constructors
 

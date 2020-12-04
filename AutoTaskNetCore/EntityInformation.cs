@@ -5,7 +5,7 @@ namespace AutotaskNET
     public class EntityInformation
     {
         public EntityInformation() { } //end PicklistValue()
-        public EntityInformation(net.autotask.webservices.EntityInfo entity_information)
+        public EntityInformation(ATWS.EntityInfo entity_information)
         {
             this.name = entity_information.Name;
             this.canQuery = entity_information.CanQuery;

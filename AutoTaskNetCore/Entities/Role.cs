@@ -25,7 +25,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Role() : base() { } //end Role()
-        public Role(net.autotask.webservices.Role entity) : base(entity)
+        public Role(ATWS.Role entity) : base(entity)
         {
             this.Active = bool.Parse(entity.Active.ToString());
             this.Description = entity.Description == null ? default(string) : entity.Description.ToString();
@@ -37,11 +37,11 @@ namespace AutotaskNET.Entities
             this.RoleType = entity.RoleType == null ? default(int?) : int.Parse(entity.RoleType.ToString());
             this.SystemRole = entity.SystemRole == null ? default(bool?) : bool.Parse(entity.SystemRole.ToString());
 
-        } //end Role(net.autotask.webservices.Role entity)
+        } //end Role(ATWS.Role entity)
 
-        public static implicit operator net.autotask.webservices.Role(Role role)
+        public static implicit operator ATWS.Role(Role role)
         {
-            return new net.autotask.webservices.Role()
+            return new ATWS.Role()
             {
                 id = role.id,
                 Active = role.Active,
@@ -55,7 +55,7 @@ namespace AutotaskNET.Entities
                 SystemRole = role.SystemRole
             };
 
-        } //end implicit operator net.autotask.webservices.Role(Role role)
+        } //end implicit operator ATWS.Role(Role role)
 
         #endregion //Constructors
 

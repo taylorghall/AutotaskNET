@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketChecklistItem() : base() { } //end TicketChecklistItem()
-        public TicketChecklistItem(net.autotask.webservices.TicketChecklistItem entity) : base(entity)
+        public TicketChecklistItem(ATWS.TicketChecklistItem entity) : base(entity)
         {
 
-        } //end Account(net.autotask.webservices.Account entity)
+        } //end Account(ATWS.Account entity)
 
-        public static implicit operator net.autotask.webservices.TicketChecklistItem(TicketChecklistItem ticketchecklistitem)
+        public static implicit operator ATWS.TicketChecklistItem(TicketChecklistItem ticketchecklistitem)
         {
-            return new net.autotask.webservices.TicketChecklistItem()
+            return new ATWS.TicketChecklistItem()
             {
                 id = ticketchecklistitem.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketChecklistItem(TicketChecklistItem ticketchecklistitem)
+        } //end implicit operator ATWS.TicketChecklistItem(TicketChecklistItem ticketchecklistitem)
 
         #endregion //Constructors
 

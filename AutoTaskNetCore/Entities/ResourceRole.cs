@@ -21,7 +21,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ResourceRole() : base() { } //end ResourceRole()
-        public ResourceRole(net.autotask.webservices.ResourceRole entity) : base(entity)
+        public ResourceRole(ATWS.ResourceRole entity) : base(entity)
         {
             this.Active = entity.Active == null ? default(bool?) : bool.Parse(entity.Active.ToString());
             this.DepartmentID = entity.DepartmentID == null ? default(long?) : long.Parse(entity.DepartmentID.ToString());
@@ -29,11 +29,11 @@ namespace AutotaskNET.Entities
             this.ResourceID = long.Parse(entity.ResourceID.ToString());
             this.RoleID = long.Parse(entity.RoleID.ToString());
 
-        } //end ResourceRole(net.autotask.webservices.ResourceRole entity)
+        } //end ResourceRole(ATWS.ResourceRole entity)
 
-        public static implicit operator net.autotask.webservices.ResourceRole(ResourceRole resourcerole)
+        public static implicit operator ATWS.ResourceRole(ResourceRole resourcerole)
         {
-            return new net.autotask.webservices.ResourceRole()
+            return new ATWS.ResourceRole()
             {
                 id = resourcerole.id,
                 Active = resourcerole.Active,
@@ -43,7 +43,7 @@ namespace AutotaskNET.Entities
                 RoleID = resourcerole.RoleID
             };
 
-        } //end implicit operator net.autotask.webservices.ResourceRole(ResourceRole resourcerole)
+        } //end implicit operator ATWS.ResourceRole(ResourceRole resourcerole)
 
         #endregion //Constructors
 

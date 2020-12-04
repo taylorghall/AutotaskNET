@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public SurveyResults() : base() { } //end SurveyResults()
-        public SurveyResults(net.autotask.webservices.SurveyResults entity) : base(entity)
+        public SurveyResults(ATWS.SurveyResults entity) : base(entity)
         {
 
-        } //end SurveyResults(net.autotask.webservices.SurveyResults entity)
+        } //end SurveyResults(ATWS.SurveyResults entity)
 
-        public static implicit operator net.autotask.webservices.SurveyResults(SurveyResults surveyresults)
+        public static implicit operator ATWS.SurveyResults(SurveyResults surveyresults)
         {
-            return new net.autotask.webservices.SurveyResults()
+            return new ATWS.SurveyResults()
             {
                 id = surveyresults.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.SurveyResults(SurveyResults surveyresults)
+        } //end implicit operator ATWS.SurveyResults(SurveyResults surveyresults)
 
         #endregion //Constructors
 

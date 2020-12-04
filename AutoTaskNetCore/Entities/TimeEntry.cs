@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TimeEntry() : base() { } //end TimeEntry()
-        public TimeEntry(net.autotask.webservices.TimeEntry entity) : base(entity)
+        public TimeEntry(ATWS.TimeEntry entity) : base(entity)
         {
             this.AllocationCodeID = entity.AllocationCodeID == null ? default(int?) : int.Parse(entity.AllocationCodeID.ToString());
             this.BillingApprovalDateTime = entity.BillingApprovalDateTime == null ? default(DateTime?) : DateTime.Parse(entity.BillingApprovalDateTime.ToString());
@@ -53,11 +53,11 @@ namespace AutotaskNET.Entities
             this.TicketID = entity.TicketID == null ? default(int?) : int.Parse(entity.TicketID.ToString());
             this.Type = entity.Type == null ? default(int?) : int.Parse(entity.Type.ToString());
 
-        } //end TimeEntry(net.autotask.webservices.TimeEntry entity)
+        } //end TimeEntry(ATWS.TimeEntry entity)
 
-        public static implicit operator net.autotask.webservices.TimeEntry(TimeEntry timeentry)
+        public static implicit operator ATWS.TimeEntry(TimeEntry timeentry)
         {
-            return new net.autotask.webservices.TimeEntry()
+            return new ATWS.TimeEntry()
             {
                 id = timeentry.id,
                 AllocationCodeID = timeentry.AllocationCodeID,
@@ -89,7 +89,7 @@ namespace AutotaskNET.Entities
                 Type = timeentry.Type
             };
 
-        } //end implicit operator net.autotask.webservices.TimeEntry(TimeEntry timeentry)
+        } //end implicit operator ATWS.TimeEntry(TimeEntry timeentry)
 
         #endregion //Constructors
 

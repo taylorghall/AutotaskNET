@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ResourceRoleQueue() : base() { } //end ResourceRoleQueue()
-        public ResourceRoleQueue(net.autotask.webservices.ResourceRoleQueue entity) : base(entity)
+        public ResourceRoleQueue(ATWS.ResourceRoleQueue entity) : base(entity)
         {
 
-        } //end ResourceRoleQueue(net.autotask.webservices.ResourceRoleQueue entity)
+        } //end ResourceRoleQueue(ATWS.ResourceRoleQueue entity)
 
-        public static implicit operator net.autotask.webservices.ResourceRoleQueue(ResourceRoleQueue resourcerolequeue)
+        public static implicit operator ATWS.ResourceRoleQueue(ResourceRoleQueue resourcerolequeue)
         {
-            return new net.autotask.webservices.ResourceRoleQueue()
+            return new ATWS.ResourceRoleQueue()
             {
                 id = resourcerolequeue.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ResourceRoleQueue(ResourceRoleQueue resourcerolequeue)
+        } //end implicit operator ATWS.ResourceRoleQueue(ResourceRoleQueue resourcerolequeue)
 
         #endregion //Constructors
 

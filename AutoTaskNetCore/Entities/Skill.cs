@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Skill() : base() { } //end Skill()
-        public Skill(net.autotask.webservices.Skill entity) : base(entity)
+        public Skill(ATWS.Skill entity) : base(entity)
         {
 
-        } //end Skill(net.autotask.webservices.Skill entity)
+        } //end Skill(ATWS.Skill entity)
 
-        public static implicit operator net.autotask.webservices.Skill(Skill skill)
+        public static implicit operator ATWS.Skill(Skill skill)
         {
-            return new net.autotask.webservices.Skill()
+            return new ATWS.Skill()
             {
                 id = skill.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Skill(Skill skill)
+        } //end implicit operator ATWS.Skill(Skill skill)
 
         #endregion //Constructors
 

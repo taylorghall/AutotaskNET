@@ -22,7 +22,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ProjectNote() : base() { } //end ProjectNote()
-        public ProjectNote(net.autotask.webservices.ProjectNote entity) : base(entity)
+        public ProjectNote(ATWS.ProjectNote entity) : base(entity)
         {
             this.Announce = bool.Parse(entity.Announce.ToString());
             this.CreatorResourceID = entity.CreatorResourceID == null ? default(int?) : int.Parse(entity.CreatorResourceID.ToString());
@@ -33,11 +33,11 @@ namespace AutotaskNET.Entities
             this.Publish = int.Parse(entity.Publish.ToString());
             this.Title = entity.Title == null ? default(string) : entity.Title.ToString();
 
-        } //end ProjectNote(net.autotask.webservices.ProjectNote entity)
+        } //end ProjectNote(ATWS.ProjectNote entity)
 
-        public static implicit operator net.autotask.webservices.ProjectNote(ProjectNote projectnote)
+        public static implicit operator ATWS.ProjectNote(ProjectNote projectnote)
         {
-            return new net.autotask.webservices.ProjectNote()
+            return new ATWS.ProjectNote()
             {
                 id = projectnote.id,
                 Announce = projectnote.Announce,
@@ -50,7 +50,7 @@ namespace AutotaskNET.Entities
                 Title = projectnote.Title
             };
 
-        } //end implicit operator net.autotask.webservices.ProjectNote(ProjectNote projectnote)
+        } //end implicit operator ATWS.ProjectNote(ProjectNote projectnote)
 
         #endregion //Constructors
 

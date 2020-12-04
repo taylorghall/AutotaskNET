@@ -26,7 +26,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Ticket() : base() { } //end Ticket()
-        public Ticket(net.autotask.webservices.Ticket entity) : base(entity)
+        public Ticket(ATWS.Ticket entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.AccountPhysicalLocationID = entity.AccountPhysicalLocationID == null ? default(int?) : int.Parse(entity.AccountPhysicalLocationID.ToString());
@@ -93,12 +93,12 @@ namespace AutotaskNET.Entities
             this.Title = entity.Title.ToString();
             this.UserDefinedFields = entity.UserDefinedFields?.Select(udf => new UserDefinedField { Name = udf.Name, Value = udf.Value }).ToList();
 
-        } //end Ticket(net.autotask.webservices.Ticket entity)
+        } //end Ticket(ATWS.Ticket entity)
 
 
-        public static implicit operator net.autotask.webservices.Ticket(Ticket ticket)
+        public static implicit operator ATWS.Ticket(Ticket ticket)
         {
-            return new net.autotask.webservices.Ticket()
+            return new ATWS.Ticket()
             {
                 id = ticket.id,
                 AccountID = ticket.AccountID,
@@ -164,10 +164,10 @@ namespace AutotaskNET.Entities
                 TicketNumber = ticket.TicketNumber,
                 TicketType = ticket.TicketType,
                 Title = ticket.Title,
-                UserDefinedFields = Array.ConvertAll(ticket.UserDefinedFields.ToArray(), new Converter<UserDefinedField, net.autotask.webservices.UserDefinedField>(UserDefinedField.ToATWS))
+                UserDefinedFields = Array.ConvertAll(ticket.UserDefinedFields.ToArray(), new Converter<UserDefinedField, ATWS.UserDefinedField>(UserDefinedField.ToATWS))
             };
 
-        } //end implicit operator net.autotask.webservices.Ticket(Ticket ticket)
+        } //end implicit operator ATWS.Ticket(Ticket ticket)
 
         #endregion //Constructors
 

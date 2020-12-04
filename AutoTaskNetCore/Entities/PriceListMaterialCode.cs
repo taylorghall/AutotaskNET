@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public PriceListMaterialCode() : base() { } //end PriceListMaterialCode()
-        public PriceListMaterialCode(net.autotask.webservices.PriceListMaterialCode entity) : base(entity)
+        public PriceListMaterialCode(ATWS.PriceListMaterialCode entity) : base(entity)
         {
 
-        } //end PriceListMaterialCode(net.autotask.webservices.PriceListMaterialCode entity)
+        } //end PriceListMaterialCode(ATWS.PriceListMaterialCode entity)
 
-        public static implicit operator net.autotask.webservices.PriceListMaterialCode(PriceListMaterialCode pricelistmaterialcode)
+        public static implicit operator ATWS.PriceListMaterialCode(PriceListMaterialCode pricelistmaterialcode)
         {
-            return new net.autotask.webservices.PriceListMaterialCode()
+            return new ATWS.PriceListMaterialCode()
             {
                 id = pricelistmaterialcode.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.PriceListMaterialCode(PriceListMaterialCode pricelistmaterialcode)
+        } //end implicit operator ATWS.PriceListMaterialCode(PriceListMaterialCode pricelistmaterialcode)
 
         #endregion //Constructors
 

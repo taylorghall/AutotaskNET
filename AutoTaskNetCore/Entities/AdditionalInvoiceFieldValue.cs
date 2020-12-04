@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AdditionalInvoiceFieldValue() : base() { } //end AdditionalInvoiceFieldValue()
-        public AdditionalInvoiceFieldValue(net.autotask.webservices.AdditionalInvoiceFieldValue entity) : base(entity)
+        public AdditionalInvoiceFieldValue(ATWS.AdditionalInvoiceFieldValue entity) : base(entity)
         {
 
-        } //end AdditionalInvoiceFieldValue(net.autotask.webservices.AdditionalInvoiceFieldValue entity)
+        } //end AdditionalInvoiceFieldValue(ATWS.AdditionalInvoiceFieldValue entity)
 
-        public static implicit operator net.autotask.webservices.AdditionalInvoiceFieldValue(AdditionalInvoiceFieldValue additionalinvoicefieldvalue)
+        public static implicit operator ATWS.AdditionalInvoiceFieldValue(AdditionalInvoiceFieldValue additionalinvoicefieldvalue)
         {
-            return new net.autotask.webservices.AdditionalInvoiceFieldValue()
+            return new ATWS.AdditionalInvoiceFieldValue()
             {
                 id = additionalinvoicefieldvalue.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.AdditionalInvoiceFieldValue(AdditionalInvoiceFieldValue additionalinvoicefieldvalue)
+        } //end implicit operator ATWS.AdditionalInvoiceFieldValue(AdditionalInvoiceFieldValue additionalinvoicefieldvalue)
 
         #endregion //Constructors
 

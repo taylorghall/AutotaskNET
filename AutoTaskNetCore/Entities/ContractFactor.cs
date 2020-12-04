@@ -25,20 +25,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractFactor() : base() { } //end ContractFactor()
-        public ContractFactor(net.autotask.webservices.ContractFactor entity) : base(entity)
+        public ContractFactor(ATWS.ContractFactor entity) : base(entity)
         {
 
-        } //end ContractFactor(net.autotask.webservices.ContractFactor entity)
+        } //end ContractFactor(ATWS.ContractFactor entity)
 
-        public static implicit operator net.autotask.webservices.ContractFactor(ContractFactor contractfactor)
+        public static implicit operator ATWS.ContractFactor(ContractFactor contractfactor)
         {
-            return new net.autotask.webservices.ContractFactor()
+            return new ATWS.ContractFactor()
             {
                 id = contractfactor.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractFactor(ContractFactor contractfactor)
+        } //end implicit operator ATWS.ContractFactor(ContractFactor contractfactor)
 
         #endregion //Constructors
 

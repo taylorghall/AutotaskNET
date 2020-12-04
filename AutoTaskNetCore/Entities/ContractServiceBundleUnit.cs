@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractServiceBundleUnit() : base() { } //end ContractServiceBundleUnit()
-        public ContractServiceBundleUnit(net.autotask.webservices.ContractServiceBundleUnit entity) : base(entity)
+        public ContractServiceBundleUnit(ATWS.ContractServiceBundleUnit entity) : base(entity)
         {
 
-        } //end ContractServiceBundleUnit(net.autotask.webservices.ContractServiceBundleUnit entity)
+        } //end ContractServiceBundleUnit(ATWS.ContractServiceBundleUnit entity)
 
-        public static implicit operator net.autotask.webservices.ContractServiceBundleUnit(ContractServiceBundleUnit contractservicebundleunit)
+        public static implicit operator ATWS.ContractServiceBundleUnit(ContractServiceBundleUnit contractservicebundleunit)
         {
-            return new net.autotask.webservices.ContractServiceBundleUnit()
+            return new ATWS.ContractServiceBundleUnit()
             {
                 id = contractservicebundleunit.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractServiceBundleUnit(ContractServiceBundleUnit contractservicebundleunit)
+        } //end implicit operator ATWS.ContractServiceBundleUnit(ContractServiceBundleUnit contractservicebundleunit)
 
         #endregion //Constructors
 

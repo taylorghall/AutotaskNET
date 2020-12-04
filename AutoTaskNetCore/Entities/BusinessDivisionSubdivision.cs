@@ -21,20 +21,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public BusinessDivisionSubdivision() : base() { } //end BusinessDivisionSubdivision()
-        public BusinessDivisionSubdivision(net.autotask.webservices.BusinessDivisionSubdivision entity) : base(entity)
+        public BusinessDivisionSubdivision(ATWS.BusinessDivisionSubdivision entity) : base(entity)
         {
 
-        } //end BusinessDivisionSubdivision(net.autotask.webservices.BusinessDivisionSubdivision entity)
+        } //end BusinessDivisionSubdivision(ATWS.BusinessDivisionSubdivision entity)
 
-        public static implicit operator net.autotask.webservices.BusinessDivisionSubdivision(BusinessDivisionSubdivision businessdivisionsubdivision)
+        public static implicit operator ATWS.BusinessDivisionSubdivision(BusinessDivisionSubdivision businessdivisionsubdivision)
         {
-            return new net.autotask.webservices.BusinessDivisionSubdivision()
+            return new ATWS.BusinessDivisionSubdivision()
             {
                 id = businessdivisionsubdivision.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.BusinessDivisionSubdivision(BusinessDivisionSubdivision businessdivisionsubdivision)
+        } //end implicit operator ATWS.BusinessDivisionSubdivision(BusinessDivisionSubdivision businessdivisionsubdivision)
 
         #endregion //Constructors
 

@@ -23,24 +23,24 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Department() : base() { } //end Department()
-        public Department(net.autotask.webservices.Department entity) : base(entity)
+        public Department(ATWS.Department entity) : base(entity)
         {
             this.Description = entity.Description == null ? default(string) : entity.Description.ToString();
             this.Name = entity.Name == null ? default(string) : entity.Name.ToString();
             this.Number = entity.Number == null ? default(string) : entity.Number.ToString();
             this.PrimaryLocationID = int.Parse(entity.PrimaryLocationID.ToString());
 
-        } //end Department(net.autotask.webservices.Department entity)
+        } //end Department(ATWS.Department entity)
 
-        public static implicit operator net.autotask.webservices.Department(Department department)
+        public static implicit operator ATWS.Department(Department department)
         {
-            return new net.autotask.webservices.Department()
+            return new ATWS.Department()
             {
                 id = department.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Department(Department department)
+        } //end implicit operator ATWS.Department(Department department)
 
         #endregion //Constructors
 

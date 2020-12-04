@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ChangeRequestLink() : base() { } //end ChangeRequestLink()
-        public ChangeRequestLink(net.autotask.webservices.ChangeRequestLink entity) : base(entity)
+        public ChangeRequestLink(ATWS.ChangeRequestLink entity) : base(entity)
         {
 
-        } //end ChangeRequestLink(net.autotask.webservices.ChangeRequestLink entity)
+        } //end ChangeRequestLink(ATWS.ChangeRequestLink entity)
 
-        public static implicit operator net.autotask.webservices.ChangeRequestLink(ChangeRequestLink changerequestlink)
+        public static implicit operator ATWS.ChangeRequestLink(ChangeRequestLink changerequestlink)
         {
-            return new net.autotask.webservices.ChangeRequestLink()
+            return new ATWS.ChangeRequestLink()
             {
                 id = changerequestlink.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ChangeRequestLink(ChangeRequestLink changerequestlink)
+        } //end implicit operator ATWS.ChangeRequestLink(ChangeRequestLink changerequestlink)
 
         #endregion //Constructors
 

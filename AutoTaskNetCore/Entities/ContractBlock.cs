@@ -25,20 +25,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractBlock() : base() { } //end ContractBlock()
-        public ContractBlock(net.autotask.webservices.ContractBlock entity) : base(entity)
+        public ContractBlock(ATWS.ContractBlock entity) : base(entity)
         {
 
-        } //end ContractBlock(net.autotask.webservices.ContractBlock entity)
+        } //end ContractBlock(ATWS.ContractBlock entity)
 
-        public static implicit operator net.autotask.webservices.ContractBlock(ContractBlock contractblock)
+        public static implicit operator ATWS.ContractBlock(ContractBlock contractblock)
         {
-            return new net.autotask.webservices.ContractBlock()
+            return new ATWS.ContractBlock()
             {
                 id = contractblock.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractBlock(ContractBlock contractblock)
+        } //end implicit operator ATWS.ContractBlock(ContractBlock contractblock)
 
         #endregion //Constructors
 

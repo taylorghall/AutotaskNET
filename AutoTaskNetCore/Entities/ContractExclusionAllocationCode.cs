@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractExclusionAllocationCode() : base() { } //end ContractExclusionAllocationCode()
-        public ContractExclusionAllocationCode(net.autotask.webservices.ContractExclusionAllocationCode entity) : base(entity)
+        public ContractExclusionAllocationCode(ATWS.ContractExclusionAllocationCode entity) : base(entity)
         {
 
-        } //end ContractExclusionAllocationCode(net.autotask.webservices.ContractExclusionAllocationCode entity)
+        } //end ContractExclusionAllocationCode(ATWS.ContractExclusionAllocationCode entity)
 
-        public static implicit operator net.autotask.webservices.ContractExclusionAllocationCode(ContractExclusionAllocationCode contractexclusionallocationcode)
+        public static implicit operator ATWS.ContractExclusionAllocationCode(ContractExclusionAllocationCode contractexclusionallocationcode)
         {
-            return new net.autotask.webservices.ContractExclusionAllocationCode()
+            return new ATWS.ContractExclusionAllocationCode()
             {
                 id = contractexclusionallocationcode.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractExclusionAllocationCode(ContractExclusionAllocationCode contractexclusionallocationcode)
+        } //end implicit operator ATWS.ContractExclusionAllocationCode(ContractExclusionAllocationCode contractexclusionallocationcode)
 
         #endregion //Constructors
 

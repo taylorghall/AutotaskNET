@@ -23,20 +23,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketChangeRequestApproval() : base() { } //end TicketChangeRequestApproval()
-        public TicketChangeRequestApproval(net.autotask.webservices.TicketChangeRequestApproval entity) : base(entity)
+        public TicketChangeRequestApproval(ATWS.TicketChangeRequestApproval entity) : base(entity)
         {
 
-        } //end TicketChangeRequestApproval(net.autotask.webservices.TicketChangeRequestApproval entity)
+        } //end TicketChangeRequestApproval(ATWS.TicketChangeRequestApproval entity)
 
-        public static implicit operator net.autotask.webservices.TicketChangeRequestApproval(TicketChangeRequestApproval ticketchangerequestapproval)
+        public static implicit operator ATWS.TicketChangeRequestApproval(TicketChangeRequestApproval ticketchangerequestapproval)
         {
-            return new net.autotask.webservices.TicketChangeRequestApproval()
+            return new ATWS.TicketChangeRequestApproval()
             {
                 id = ticketchangerequestapproval.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketChangeRequestApproval(TicketChangeRequestApproval ticketchangerequestapproval)
+        } //end implicit operator ATWS.TicketChangeRequestApproval(TicketChangeRequestApproval ticketchangerequestapproval)
 
         #endregion //Constructors
 

@@ -23,21 +23,21 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public BillingItem() : base() { } //end BillingItem()
-        public BillingItem(net.autotask.webservices.BillingItem entity) : base(entity)
+        public BillingItem(ATWS.BillingItem entity) : base(entity)
         {
             id = entity.id;
             InvoiceID = entity.InvoiceID == null ? default : int.Parse(entity.InvoiceID.ToString());
-        } //end BillingItem(net.autotask.webservices.BillingItem entity)
+        } //end BillingItem(ATWS.BillingItem entity)
 
-        public static implicit operator net.autotask.webservices.BillingItem(BillingItem billingitem)
+        public static implicit operator ATWS.BillingItem(BillingItem billingitem)
         {
-            return new net.autotask.webservices.BillingItem()
+            return new ATWS.BillingItem()
             {
                 id = billingitem.id,
                 InvoiceID = billingitem.InvoiceID
             };
 
-        } //end implicit operator net.autotask.webservices.BillingItem(BillingItem billingitem)
+        } //end implicit operator ATWS.BillingItem(BillingItem billingitem)
 
         #endregion //Constructors
 

@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public PaymentTerm() : base() { } //end PaymentTerm()
-        public PaymentTerm(net.autotask.webservices.PaymentTerm entity) : base(entity)
+        public PaymentTerm(ATWS.PaymentTerm entity) : base(entity)
         {
 
-        } //end PaymentTerm(net.autotask.webservices.PaymentTerm entity)
+        } //end PaymentTerm(ATWS.PaymentTerm entity)
 
-        public static implicit operator net.autotask.webservices.PaymentTerm(PaymentTerm paymentterm)
+        public static implicit operator ATWS.PaymentTerm(PaymentTerm paymentterm)
         {
-            return new net.autotask.webservices.PaymentTerm()
+            return new ATWS.PaymentTerm()
             {
                 id = paymentterm.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.PaymentTerm(PaymentTerm paymentterm)
+        } //end implicit operator ATWS.PaymentTerm(PaymentTerm paymentterm)
 
         #endregion //Constructors
 

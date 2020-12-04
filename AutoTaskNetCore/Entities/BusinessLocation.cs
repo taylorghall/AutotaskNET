@@ -22,20 +22,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public BusinessLocation() : base() { } //end BusinessLocation()
-        public BusinessLocation(net.autotask.webservices.BusinessLocation entity) : base(entity)
+        public BusinessLocation(ATWS.BusinessLocation entity) : base(entity)
         {
 
-        } //end BusinessLocation(net.autotask.webservices.BusinessLocation entity)
+        } //end BusinessLocation(ATWS.BusinessLocation entity)
 
-        public static implicit operator net.autotask.webservices.BusinessLocation(BusinessLocation businesslocation)
+        public static implicit operator ATWS.BusinessLocation(BusinessLocation businesslocation)
         {
-            return new net.autotask.webservices.BusinessLocation()
+            return new ATWS.BusinessLocation()
             {
                 id = businesslocation.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.BusinessLocation(BusinessLocation businesslocation)
+        } //end implicit operator ATWS.BusinessLocation(BusinessLocation businesslocation)
 
         #endregion //Constructors
 

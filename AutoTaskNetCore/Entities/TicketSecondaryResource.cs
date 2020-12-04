@@ -24,23 +24,23 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TicketSecondaryResource() : base() { } //end TicketSecondaryResource()
-        public TicketSecondaryResource(net.autotask.webservices.TicketSecondaryResource entity) : base(entity)
+        public TicketSecondaryResource(ATWS.TicketSecondaryResource entity) : base(entity)
         {
             this.ResourceID = long.Parse(entity.ResourceID.ToString());
             this.RoleID = long.Parse(entity.RoleID.ToString());
             this.TicketID = long.Parse(entity.TicketID.ToString());
 
-        } //end TicketSecondaryResource(net.autotask.webservices.TicketSecondaryResource entity)
+        } //end TicketSecondaryResource(ATWS.TicketSecondaryResource entity)
 
-        public static implicit operator net.autotask.webservices.TicketSecondaryResource(TicketSecondaryResource ticketsecondaryresource)
+        public static implicit operator ATWS.TicketSecondaryResource(TicketSecondaryResource ticketsecondaryresource)
         {
-            return new net.autotask.webservices.TicketSecondaryResource()
+            return new ATWS.TicketSecondaryResource()
             {
                 id = ticketsecondaryresource.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.TicketSecondaryResource(TicketSecondaryResource ticketsecondaryresource)
+        } //end implicit operator ATWS.TicketSecondaryResource(TicketSecondaryResource ticketsecondaryresource)
 
         #endregion //Constructors
 

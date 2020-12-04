@@ -22,20 +22,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ClassificationIcon() : base() { } //end ClassificationIcon()
-        public ClassificationIcon(net.autotask.webservices.ClassificationIcon entity) : base(entity)
+        public ClassificationIcon(ATWS.ClassificationIcon entity) : base(entity)
         {
 
-        } //end ClassificationIcon(net.autotask.webservices.ClassificationIcon entity)
+        } //end ClassificationIcon(ATWS.ClassificationIcon entity)
 
-        public static implicit operator net.autotask.webservices.ClassificationIcon(ClassificationIcon classificationicon)
+        public static implicit operator ATWS.ClassificationIcon(ClassificationIcon classificationicon)
         {
-            return new net.autotask.webservices.ClassificationIcon()
+            return new ATWS.ClassificationIcon()
             {
                 id = classificationicon.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ClassificationIcon(ClassificationIcon classificationicon)
+        } //end implicit operator ATWS.ClassificationIcon(ClassificationIcon classificationicon)
 
         #endregion //Constructors
 

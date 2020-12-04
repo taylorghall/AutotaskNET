@@ -27,20 +27,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public Currency() : base() { } //end Currency()
-        public Currency(net.autotask.webservices.Currency entity) : base(entity)
+        public Currency(ATWS.Currency entity) : base(entity)
         {
 
-        } //end Currency(net.autotask.webservices.Currency entity)
+        } //end Currency(ATWS.Currency entity)
 
-        public static implicit operator net.autotask.webservices.Currency(Currency currency)
+        public static implicit operator ATWS.Currency(Currency currency)
         {
-            return new net.autotask.webservices.Currency()
+            return new ATWS.Currency()
             {
                 id = currency.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.Currency(Currency currency)
+        } //end implicit operator ATWS.Currency(Currency currency)
 
         #endregion //Constructors
 

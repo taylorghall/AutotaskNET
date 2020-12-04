@@ -23,7 +23,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public AccountPhysicalLocation() : base() { } //end AccountPhysicalLocation()
-        public AccountPhysicalLocation(net.autotask.webservices.AccountPhysicalLocation entity) : base(entity)
+        public AccountPhysicalLocation(ATWS.AccountPhysicalLocation entity) : base(entity)
         {
             Name = entity.Name.ToString();
             AccountID = entity.AccountID == null ? default : int.Parse(entity.AccountID.ToString());
@@ -45,11 +45,11 @@ namespace AutotaskNET.Entities
             Phone = entity.Phone.ToString();
             id = entity.id;
 
-        } //end AccountPhysicalLocation(net.autotask.webservices.AccountPhysicalLocation entity)
+        } //end AccountPhysicalLocation(ATWS.AccountPhysicalLocation entity)
 
-        public static implicit operator net.autotask.webservices.AccountPhysicalLocation(AccountPhysicalLocation accountphysicallocation)
+        public static implicit operator ATWS.AccountPhysicalLocation(AccountPhysicalLocation accountphysicallocation)
         {
-            return new net.autotask.webservices.AccountPhysicalLocation()
+            return new ATWS.AccountPhysicalLocation()
             {
                 id = accountphysicallocation.id,
                 Name = accountphysicallocation.Name,
@@ -71,7 +71,7 @@ namespace AutotaskNET.Entities
                 UserDefinedFields = accountphysicallocation.UserDefinedFields == null ? default : Array.ConvertAll(accountphysicallocation.UserDefinedFields.ToArray(), UserDefinedField.ToATWS)
             };
 
-        } //end implicit operator net.autotask.webservices.AccountPhysicalLocation(AccountPhysicalLocation accountphysicallocation)
+        } //end implicit operator ATWS.AccountPhysicalLocation(AccountPhysicalLocation accountphysicallocation)
 
         #endregion //Constructors
 

@@ -22,23 +22,23 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public TaxRegion() : base() { } //end TaxRegion()
-        public TaxRegion(net.autotask.webservices.TaxRegion entity) : base(entity)
+        public TaxRegion(ATWS.TaxRegion entity) : base(entity)
         {
             this.Active = entity.Active == null ? default(bool?) : bool.Parse(entity.Active.ToString());
             this.Name = entity.Name == null ? default(string) : entity.Name.ToString();
 
-        } //end TaxRegion(net.autotask.webservices.TaxRegion entity)
+        } //end TaxRegion(ATWS.TaxRegion entity)
 
-        public static implicit operator net.autotask.webservices.TaxRegion(TaxRegion taxregion)
+        public static implicit operator ATWS.TaxRegion(TaxRegion taxregion)
         {
-            return new net.autotask.webservices.TaxRegion()
+            return new ATWS.TaxRegion()
             {
                 id = taxregion.id,
                 Active = taxregion.Active,
                 Name = taxregion.Name
             };
 
-        } //end implicit operator net.autotask.webservices.TaxRegion(TaxRegion taxregion)
+        } //end implicit operator ATWS.TaxRegion(TaxRegion taxregion)
 
         #endregion //Constructors
 

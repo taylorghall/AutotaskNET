@@ -24,20 +24,20 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public InventoryLocation() : base() { } //end InventoryLocation()
-        public InventoryLocation(net.autotask.webservices.InventoryLocation entity) : base(entity)
+        public InventoryLocation(ATWS.InventoryLocation entity) : base(entity)
         {
 
-        } //end InventoryLocation(net.autotask.webservices.InventoryLocation entity)
+        } //end InventoryLocation(ATWS.InventoryLocation entity)
 
-        public static implicit operator net.autotask.webservices.InventoryLocation(InventoryLocation inventorylocation)
+        public static implicit operator ATWS.InventoryLocation(InventoryLocation inventorylocation)
         {
-            return new net.autotask.webservices.InventoryLocation()
+            return new ATWS.InventoryLocation()
             {
                 id = inventorylocation.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.InventoryLocation(InventoryLocation inventorylocation)
+        } //end implicit operator ATWS.InventoryLocation(InventoryLocation inventorylocation)
 
         #endregion //Constructors
 

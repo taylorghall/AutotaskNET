@@ -6,7 +6,7 @@ namespace AutotaskNET
     public class FieldInformation
     {
         public FieldInformation() { } //end PicklistValue()
-        public FieldInformation(net.autotask.webservices.Field field_information)
+        public FieldInformation(ATWS.Field field_information)
         {
             this.Name = field_information.Name;
             this.Label = field_information.Label;
@@ -21,7 +21,7 @@ namespace AutotaskNET
             this.PicklistValues = field_information.PicklistValues == null ? null : new List<PicklistValue>();
             if (field_information.PicklistValues != null && field_information.PicklistValues.Length > 0)
             {
-                foreach (net.autotask.webservices.PickListValue plv in field_information.PicklistValues)
+                foreach (ATWS.PickListValue plv in field_information.PicklistValues)
                 {
                     this.PicklistValues.Add(new PicklistValue(plv));
                 }

@@ -8,7 +8,7 @@ namespace AutotaskNET
     public class PicklistValue
     {
         public PicklistValue() { } //end PicklistValue()
-        public PicklistValue(net.autotask.webservices.PickListValue pick_list_value)
+        public PicklistValue(ATWS.PickListValue pick_list_value)
         {
             this.Value = pick_list_value.Value == null ? default(string) : pick_list_value.Value.ToString();
             this.IsActive = bool.Parse(pick_list_value.IsActive.ToString());

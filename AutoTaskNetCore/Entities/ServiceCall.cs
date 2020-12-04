@@ -21,7 +21,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ServiceCall() : base() { } //end ServiceCall()
-        public ServiceCall(net.autotask.webservices.ServiceCall entity) : base(entity)
+        public ServiceCall(ATWS.ServiceCall entity) : base(entity)
         {
             this.AccountID = int.Parse(entity.AccountID.ToString());
             this.AccountPhysicalLocationID = entity.AccountPhysicalLocationID == null ? default(int?) : int.Parse(entity.AccountPhysicalLocationID.ToString());
@@ -38,17 +38,17 @@ namespace AutotaskNET.Entities
             this.StartDateTime = DateTime.Parse(entity.StartDateTime.ToString());
             this.Status = entity.Status == null ? default(int?) : int.Parse(entity.Status.ToString());
 
-        } //end ServiceCall(net.autotask.webservices.ServiceCall entity)
+        } //end ServiceCall(ATWS.ServiceCall entity)
 
-        public static implicit operator net.autotask.webservices.ServiceCall(ServiceCall servicecall)
+        public static implicit operator ATWS.ServiceCall(ServiceCall servicecall)
         {
-            return new net.autotask.webservices.ServiceCall()
+            return new ATWS.ServiceCall()
             {
                 id = servicecall.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ServiceCall(ServiceCall servicecall)
+        } //end implicit operator ATWS.ServiceCall(ServiceCall servicecall)
 
         #endregion //Constructors
 

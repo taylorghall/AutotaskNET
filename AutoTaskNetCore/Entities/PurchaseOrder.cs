@@ -24,7 +24,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public PurchaseOrder() : base() { } //end PurchaseOrder()
-        public PurchaseOrder(net.autotask.webservices.PurchaseOrder entity) : base(entity)
+        public PurchaseOrder(ATWS.PurchaseOrder entity) : base(entity)
         {
             this.CancelDateTime = entity.CancelDateTime == null ? default(DateTime?) : DateTime.Parse(entity.CancelDateTime.ToString());
             this.CreateDateTime = entity.CreateDateTime == null ? default(DateTime?) : DateTime.Parse(entity.CreateDateTime.ToString());
@@ -53,17 +53,17 @@ namespace AutotaskNET.Entities
             this.UseItemDescriptionsFrom = entity.UseItemDescriptionsFrom == null ? default(int?) : int.Parse(entity.UseItemDescriptionsFrom.ToString());
             this.VendorID = int.Parse(entity.VendorID.ToString());
             this.VendorInvoiceNumber = entity.VendorInvoiceNumber == null ? default(string) : entity.VendorInvoiceNumber.ToString();
-        } //end PurchaseOrder(net.autotask.webservices.PurchaseOrder entity)
+        } //end PurchaseOrder(ATWS.PurchaseOrder entity)
 
-        public static implicit operator net.autotask.webservices.PurchaseOrder(PurchaseOrder purchaseorder)
+        public static implicit operator ATWS.PurchaseOrder(PurchaseOrder purchaseorder)
         {
-            return new net.autotask.webservices.PurchaseOrder()
+            return new ATWS.PurchaseOrder()
             {
                 id = purchaseorder.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.PurchaseOrder(PurchaseOrder purchaseorder)
+        } //end implicit operator ATWS.PurchaseOrder(PurchaseOrder purchaseorder)
 
         #endregion //Constructors
 

@@ -21,7 +21,7 @@ namespace AutotaskNET.Entities
         #region Constructors
 
         public ContractServiceUnit() : base() { } //end ContractServiceUnit()
-        public ContractServiceUnit(net.autotask.webservices.ContractServiceUnit entity) : base(entity)
+        public ContractServiceUnit(ATWS.ContractServiceUnit entity) : base(entity)
         {
             this.ContractID = int.Parse(entity.ContractID.ToString());
             this.EndDate = entity.EndDate == null ? default(DateTime) : DateTime.Parse(entity.EndDate.ToString());
@@ -34,17 +34,17 @@ namespace AutotaskNET.Entities
             this.InternalCurrencyPrice = float.Parse(entity.InternalCurrencyPrice.ToString());
             this.Price = float.Parse(entity.Price.ToString());
             this.VendorAccountID = entity.BusinessDivisionSubdivisionID == null ? default(int?) : int.Parse(entity.BusinessDivisionSubdivisionID.ToString());
-        } //end ContractServiceUnit(net.autotask.webservices.ContractServiceUnit entity)
+        } //end ContractServiceUnit(ATWS.ContractServiceUnit entity)
 
-        public static implicit operator net.autotask.webservices.ContractServiceUnit(ContractServiceUnit contractserviceunit)
+        public static implicit operator ATWS.ContractServiceUnit(ContractServiceUnit contractserviceunit)
         {
-            return new net.autotask.webservices.ContractServiceUnit()
+            return new ATWS.ContractServiceUnit()
             {
                 id = contractserviceunit.id,
 
             };
 
-        } //end implicit operator net.autotask.webservices.ContractServiceUnit(ContractServiceUnit contractserviceunit)
+        } //end implicit operator ATWS.ContractServiceUnit(ContractServiceUnit contractserviceunit)
 
         #endregion //Constructors
 
