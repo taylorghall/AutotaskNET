@@ -166,10 +166,10 @@ namespace AutotaskNET.Entities
         public string ChangeInfoField3; //Length:8000
         public string ChangeInfoField4; //Length:8000
         public string ChangeInfoField5; //Length:8000
-        public long? ContractServiceID; //[ContractService]
+        public long ContractServiceID; //[ContractService]
         public long? ContractServiceBundleID; //[ContractServiceBundle]
         public int? MonitorTypeID; //PickList
-        public int? MonitorID;
+        public long MonitorID;
         public int? TicketCategory; //PickList
         public int? ProjectID; //[Project]
         public int? BusinessDivisionSubdivisionID; //[BusinessDivisionSubdivision]
